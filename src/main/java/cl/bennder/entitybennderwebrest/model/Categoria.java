@@ -16,16 +16,19 @@ import java.util.List;
 public class Categoria implements Serializable{
     private Integer idCategoria;
     private String nombre;
+    private Integer idCategoriaPadre;
     private List<Categoria> subCategorias;
 
     public Categoria() {
     }
 
-    public Categoria(Integer idCategoria, String nombre, List<Categoria> subCategorias) {
+    public Categoria(Integer idCategoria, String nombre, Integer idCategoriaPadre, List<Categoria> subCategorias) {
         this.idCategoria = idCategoria;
         this.nombre = nombre;
         this.subCategorias = subCategorias;
+        this.idCategoriaPadre = idCategoriaPadre;
     }
+
     public Integer getIdCategoria() {
         return idCategoria;
     }
@@ -49,6 +52,15 @@ public class Categoria implements Serializable{
     public void setSubCategorias(List<Categoria> subCategorias) {
         this.subCategorias = subCategorias;
     }
+
+    public Integer getIdCategoriaPadre() {
+        return idCategoriaPadre;
+    }
+
+    public void setIdCategoriaPadre(Integer idCategoriaPadre) {
+        this.idCategoriaPadre = idCategoriaPadre;
+    }
+
     @Override
     public String toString() {
         return "Categoria{" + "idCategoria=" + idCategoria + ", nombre=" + nombre + '}';
