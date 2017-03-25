@@ -20,6 +20,7 @@ public class CategoriaResponse extends ValidacionResponse implements Serializabl
     //private Validacion validacion;
     private List<Categoria> categoriasRelacionadas;
     private List<Beneficio> beneficios;
+    private Categoria categoriaPadre;
 
     public CategoriaResponse() {
     }
@@ -44,5 +45,13 @@ public class CategoriaResponse extends ValidacionResponse implements Serializabl
 
     public void setBeneficios(List<Beneficio> beneficios) {
         this.beneficios = beneficios;
+    }
+
+    public Categoria getCategoriaPadre() {
+        return categoriaPadre;
+    }
+
+    public void setCategoriaPadre(Categoria categoriaPadre) {
+        this.categoriaPadre = categoriaPadre;
     }
 }

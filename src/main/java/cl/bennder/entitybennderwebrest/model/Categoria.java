@@ -18,6 +18,7 @@ public class Categoria implements Serializable{
     private String nombre;
     private Integer idCategoriaPadre;
     private List<Categoria> subCategorias;
+    private Integer cantidadBeneficios;
 
     public Categoria() {
     }
@@ -65,5 +66,12 @@ public class Categoria implements Serializable{
     public String toString() {
         return "Categoria{" + "idCategoria=" + idCategoria + ", nombre=" + nombre + '}';
     }
-    
+
+    public Integer getCantidadBeneficios() {
+        return cantidadBeneficios;
+    }
+
+    public void setCantidadBeneficios(Integer cantidadBeneficios) {
+        this.cantidadBeneficios = cantidadBeneficios;
+    }
 }
