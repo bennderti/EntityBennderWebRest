@@ -12,8 +12,9 @@ import java.io.Serializable;
  *
  * @author dyanez
  */
-public class LoginResponse extends ValidacionResponse implements Serializable{
+ public class LoginResponse extends ValidacionResponse implements Serializable{
     private Integer idUsuario;//rut sin dv
+    private Integer idEstadoUsuario;
 
     public LoginResponse(Integer idUsuario) {
         this.idUsuario = idUsuario;
@@ -52,6 +53,11 @@ public class LoginResponse extends ValidacionResponse implements Serializable{
         return "LoginResponse{" + "idUsuario=" + idUsuario + '}';
     }
 
-    
-    
+    public Integer getIdEstadoUsuario() {
+        return idEstadoUsuario;
+    }
+
+    public void setIdEstadoUsuario(Integer idEstadoUsuario) {
+        this.idEstadoUsuario = idEstadoUsuario;
+    }
 }

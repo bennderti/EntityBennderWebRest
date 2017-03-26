@@ -20,6 +20,8 @@ public class Usuario {
     private Date fechaNacimiento;
     private Direccion direccion;
     private Contacto contacto;    
+    private String usuario;
+    private Integer idEstado;
 
     public Usuario() {
        
@@ -80,4 +82,20 @@ public class Usuario {
     public void setFechaNacimiento(Date fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
+
+    public String getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
+
+    public Integer getIdEstado() {
+        return idEstado;
+    }
+
+    public void setIdEstado(Integer idEstado) {
+        this.idEstado = idEstado;
+    }    
 }
