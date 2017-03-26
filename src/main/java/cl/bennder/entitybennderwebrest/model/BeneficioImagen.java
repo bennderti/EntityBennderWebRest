@@ -16,6 +16,7 @@ public class BeneficioImagen implements Serializable{
     private String nombre;
     private byte[] imagen;
     private Integer orden;//1 es considerado como imagen principal
+    private String imagenBase64;
 
     public BeneficioImagen() {
     }
@@ -63,6 +64,13 @@ public class BeneficioImagen implements Serializable{
     public String toString() {
         return "BeneficioImagen{" + "idBeneficio=" + idBeneficio + ", nombre=" + nombre + ", orden=" + orden + '}';
     }
-    
-    
+
+
+    public String getImagenBase64() {
+        return imagenBase64;
+    }
+
+    public void setImagenBase64(String imagenBase64) {
+        this.imagenBase64 = imagenBase64;
+    }
 }

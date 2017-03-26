@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by Diego on 03-03-2017.
@@ -32,6 +33,7 @@ public class Beneficio implements Serializable{
     private TipoBeneficio tipoBeneficio;
     private Integer limiteStock;
     private Integer visitasGeneral;
+    private List<BeneficioImagen> imagenesBeneficio;
 
     public Beneficio() {
     }
@@ -163,5 +165,13 @@ public class Beneficio implements Serializable{
 
     public void setVisitasGeneral(Integer visitasGeneral) {
         this.visitasGeneral = visitasGeneral;
+    }
+
+    public List<BeneficioImagen> getImagenesBeneficio() {
+        return imagenesBeneficio;
+    }
+
+    public void setImagenesBeneficio(List<BeneficioImagen> imagenesBeneficio) {
+        this.imagenesBeneficio = imagenesBeneficio;
     }
 }

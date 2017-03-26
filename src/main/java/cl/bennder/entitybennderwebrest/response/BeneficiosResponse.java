@@ -16,7 +16,7 @@ import java.util.List;
 /**
  * @author Diego
  */
-public class BeneficiosResponse implements Serializable{
+public class BeneficiosResponse extends ValidacionResponse implements Serializable{
     private Validacion validacion;
     private List<Beneficio> beneficios;
 
