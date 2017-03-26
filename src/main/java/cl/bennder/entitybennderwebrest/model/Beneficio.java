@@ -29,6 +29,7 @@ public class Beneficio implements Serializable{
     private Integer calificacion;
     private Integer stock;
     private Integer idProveedor;
+    private String nombreProveedor;
     private Integer idCategoria;
     private TipoBeneficio tipoBeneficio;
     private Integer limiteStock;
@@ -173,5 +174,13 @@ public class Beneficio implements Serializable{
 
     public void setImagenesBeneficio(List<BeneficioImagen> imagenesBeneficio) {
         this.imagenesBeneficio = imagenesBeneficio;
+    }
+
+    public String getNombreProveedor() {
+        return nombreProveedor;
+    }
+
+    public void setNombreProveedor(String nombreProveedor) {
+        this.nombreProveedor = nombreProveedor;
     }
 }
