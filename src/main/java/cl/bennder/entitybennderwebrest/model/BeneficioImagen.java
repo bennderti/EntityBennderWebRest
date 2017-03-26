@@ -58,6 +58,11 @@ public class BeneficioImagen implements Serializable{
     public void setOrden(Integer orden) {
         this.orden = orden;
     }
+
+    @Override
+    public String toString() {
+        return "BeneficioImagen{" + "idBeneficio=" + idBeneficio + ", nombre=" + nombre + ", orden=" + orden + '}';
+    }
     
     
 }

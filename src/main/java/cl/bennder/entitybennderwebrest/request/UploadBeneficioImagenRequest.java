@@ -25,13 +25,14 @@ public class UploadBeneficioImagenRequest implements Serializable{
     }
 
     public List<BeneficioImagen> getBeneficioImagenes() {
+        if(this.beneficioImagenes == null){
+            this.beneficioImagenes = new ArrayList<>();
+        }
         return beneficioImagenes;
     }
 
     public void setBeneficioImagenes(List<BeneficioImagen> beneficioImagenes) {
-        if(this.beneficioImagenes == null){
-            this.beneficioImagenes = new ArrayList<>();
-        }
+        
         this.beneficioImagenes = beneficioImagenes;
     }
     
