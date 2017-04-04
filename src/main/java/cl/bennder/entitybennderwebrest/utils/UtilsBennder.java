@@ -111,5 +111,17 @@ public class UtilsBennder {
         }
         //Logger.getLogger(UtilsBennder.class.getName()).log(Level.SEVERE, "fin");
    }
+   /***
+    * Método que obtiene la ruta absoluta de un archivo X ubicado en la carpeta de recursos src/main/resources/xxx/xx.extension
+    * @param classResources this.getClass() de la clase que se esta invocando el método
+    * @param pathFileResourceFolder ruta dentro de la carpeta de resources
+    * @return 
+    */
+   public static String getPathAbsolutaResourcesFile(Class<?> classResources,String pathFileResourceFolder){
+        ClassLoader classLoader = classResources.getClassLoader();
+        File file = new File(classLoader.getResource(pathFileResourceFolder).getFile());
+        return file.getAbsolutePath();
+    }
+   
     
 }
