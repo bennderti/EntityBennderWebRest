@@ -81,6 +81,27 @@ public class UtilsBennder {
             e.printStackTrace();
     	}
    }
+   
+   /***
+    * Método encargado de limpiar los archivos de una ruta de directorio, indicando ademas si desea eliminar el directorio
+    * @param rutaDirectorio 
+    * @param borraDirectorio 
+    */
+   public static void cleanDirectory(String rutaDirectorio, boolean borraDirectorio){
+       File dir = new File(rutaDirectorio);
+       if (dir.isDirectory()) {
+            String[] children = dir.list();
+            for (int i=0; i<children.length; i++) {            
+                File file = new File(rutaDirectorio + File.separator + children[i]);
+                if(file != null){
+                    file.delete();
+                }
+            }
+        }
+       if(borraDirectorio){
+           dir.delete();
+       }
+    }
    /***
     * Método que permite escalar o redimensionar la imagen
     * @param pathImage ruta de imagen entrada y salida

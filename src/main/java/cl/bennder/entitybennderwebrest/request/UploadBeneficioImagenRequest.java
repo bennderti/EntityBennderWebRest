@@ -15,6 +15,7 @@ import java.util.List;
  * @author dyanez
  */
 public class UploadBeneficioImagenRequest implements Serializable{
+    private Integer idProveedor;
     private List<BeneficioImagen> beneficioImagenes;
 
     public UploadBeneficioImagenRequest() {
@@ -34,6 +35,14 @@ public class UploadBeneficioImagenRequest implements Serializable{
     public void setBeneficioImagenes(List<BeneficioImagen> beneficioImagenes) {
         
         this.beneficioImagenes = beneficioImagenes;
+    }
+
+    public Integer getIdProveedor() {
+        return idProveedor;
+    }
+
+    public void setIdProveedor(Integer idProveedor) {
+        this.idProveedor = idProveedor;
     }
     
 }
