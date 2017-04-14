@@ -19,11 +19,12 @@ public class BeneficioImagen implements Serializable{
     private Integer orden;//1 es considerado como imagen principal
     private String imagenBase64;
     private String path;// ruta de la imagen en servidor de aplicaciones publica via http
+    private String urlImagen;
 
     public BeneficioImagen() {
     }
 
-    public BeneficioImagen(Integer idBeneficio, Integer idImagen, String nombre, byte[] imagen, Integer orden, String imagenBase64, String path) {
+    public BeneficioImagen(Integer idBeneficio, Integer idImagen, String nombre, byte[] imagen, Integer orden, String imagenBase64, String path, String urlImagen) {
         this.idBeneficio = idBeneficio;
         this.idImagen = idImagen;
         this.nombre = nombre;
@@ -31,7 +32,10 @@ public class BeneficioImagen implements Serializable{
         this.orden = orden;
         this.imagenBase64 = imagenBase64;
         this.path = path;
+        this.urlImagen = urlImagen;
     }
+
+    
     public Integer getIdBeneficio() {
         return idBeneficio;
     }
@@ -89,10 +93,15 @@ public class BeneficioImagen implements Serializable{
         this.path = path;
     }
 
-    @Override
-    public String toString() {
-        return "BeneficioImagen{" + "idBeneficio=" + idBeneficio + ", idImagen=" + idImagen + ", nombre=" + nombre + ", orden=" + orden + ", path=" + path + '}';
+    public String getUrlImagen() {
+        return urlImagen;
     }
+
+    public void setUrlImagen(String urlImagen) {
+        this.urlImagen = urlImagen;
+    }
+
+    
     
     
 }

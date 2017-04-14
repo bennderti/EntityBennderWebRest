@@ -6,16 +6,21 @@
 package cl.bennder.entitybennderwebrest.utils;
 
 import java.awt.Graphics2D;
+import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.File;
 import java.io.FileInputStream;
+import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
+import org.slf4j.LoggerFactory;
 
 /**
  *
@@ -23,6 +28,8 @@ import javax.imageio.ImageIO;
  */
 public class UtilsBennder {
     
+    
+    private static final org.slf4j.Logger log = LoggerFactory.getLogger(UtilsBennder.class);
     /***
      * Método que escribe byte array a url de destinto
      * @param bFile array de byte
@@ -32,10 +39,11 @@ public class UtilsBennder {
     public  static void writeBytesToFile(byte[] bFile, String fileDest) {        
         try (FileOutputStream fileOuputStream = new FileOutputStream(fileDest)) {            
             fileOuputStream.write(bFile);
-            System.out.println("cl.bennder.entitybennderwebrest.utils.UtilsBennder.writeBytesToFile() - fileDest: "+fileDest+"");
+            //System.out.println("cl.bennder.entitybennderwebrest.utils.UtilsBennder.writeBytesToFile() - fileDest: "+fileDest+"");
+            log.info("[writeBytesToFile] fileDest ->{}",fileDest);
         } catch (IOException e) {
            //e.printStackTrace();
-           Logger.getLogger(UtilsBennder.class.getName()).log(Level.SEVERE, "Exception en writeBytesToFile", e);
+           //Logger.getLogger(UtilsBennder.class.getName()).log(Level.SEVERE, "Exception en writeBytesToFile", e);
         }
 
     }
@@ -51,16 +59,19 @@ public class UtilsBennder {
       try
       {
          //convert file into array of bytes
-         System.out.println("cl.bennder.entitybennderwebrest.utils.UtilsBennder.readContentIntoByteArray() - file.getAbsolutePath(): "+file.getAbsolutePath());
+         //System.out.println("cl.bennder.entitybennderwebrest.utils.UtilsBennder.readContentIntoByteArray() - file.getAbsolutePath(): "+file.getAbsolutePath());
+         log.info("[readContentIntoByteArray] file.getAbsolutePath() ->{}",file.getAbsolutePath());
          fileInputStream = new FileInputStream(file);
          fileInputStream.read(bFile);
          fileInputStream.close();
          if(bFile!=null)
-         System.out.println("cl.bennder.entitybennderwebrest.utils.UtilsBennder.readContentIntoByteArray() - bFile.length: "+bFile.length+" Bytes.");
+         //System.out.println("cl.bennder.entitybennderwebrest.utils.UtilsBennder.readContentIntoByteArray() - bFile.length: "+bFile.length+" Bytes.");
+         log.info("[readContentIntoByteArray] bFile.length ->{} Bytes.",bFile.length);
       }
       catch (Exception e)
       {
-         e.printStackTrace();
+         //e.printStackTrace();
+         log.error("Error en readContentIntoByteArray",e);
          //Logger.getLogger(UtilsBennder.class.getName()).log(Level.SEVERE, "Exception en readContentIntoByteArray", e);
       }
       return bFile;
@@ -78,7 +89,8 @@ public class UtilsBennder {
                 file.delete();
             }
     	}catch(Exception e){
-            e.printStackTrace();
+            //e.printStackTrace();
+            log.error("Error en deleteFile",e);
     	}
    }
    
@@ -115,20 +127,24 @@ public class UtilsBennder {
         //Logger.getLogger(UtilsBennder.class.getName()).log(Level.SEVERE, "inicio");
        // System.out.println("cl.bennder.entitybennderwebrest.utils.UtilsBennder.resizeImage() - file.getAbsolutePath(): "+file.getAbsolutePath());
         try {
-            System.out.println("cl.bennder.entitybennderwebrest.utils.UtilsBennder.resizeImage() - pathImage:"+pathImage+",imgWidth:"+imgWidth+",imgHeight:"+imgHeight+",extension:"+extension);
+            //System.out.println("cl.bennder.entitybennderwebrest.utils.UtilsBennder.resizeImage() - pathImage:"+pathImage+",imgWidth:"+imgWidth+",imgHeight:"+imgHeight+",extension:"+extension);
+            log.info("[resizeImage] - pathImage:"+pathImage+",imgWidth:"+imgWidth+",imgHeight:"+imgHeight+",extension:"+extension);
+            
             originalImage = ImageIO.read(new File(pathImage));
             int type = originalImage.getType() == 0? BufferedImage.TYPE_INT_ARGB : originalImage.getType();
             BufferedImage resizedImage = new BufferedImage(imgWidth, imgHeight, type);
             Graphics2D g = resizedImage.createGraphics();
             g.drawImage(originalImage, 0, 0, imgWidth, imgHeight, null);
             g.dispose();
-            System.out.println("cl.bennder.entitybennderwebrest.utils.UtilsBennder.resizeImage() - escribiendo imagen en disco");
+            //System.out.println("cl.bennder.entitybennderwebrest.utils.UtilsBennder.resizeImage() - escribiendo imagen en disco");
+            log.info("[resizeImage] - escribiendo imagen en disco");
             ImageIO.write(resizedImage, extension, new File(pathImage));
 
             
         } catch (IOException ex) {
             //Logger.getLogger(UtilsBennder.class.getName()).log(Level.SEVERE, null, ex);
-            ex.printStackTrace();
+            //ex.printStackTrace();
+            log.error("Error en resizeImage",ex);
         }
         //Logger.getLogger(UtilsBennder.class.getName()).log(Level.SEVERE, "fin");
    }
@@ -143,6 +159,30 @@ public class UtilsBennder {
         File file = new File(classLoader.getResource(pathFileResourceFolder).getFile());
         return file.getAbsolutePath();
     }
+   /***
+    * Método que permite obtener una imagen desde servidor remoto
+    * @param httpImagen ruta http de la imagen
+    * @return 
+    */
+   public static Image getImageFromServer(String httpImagen){
+       URL url = null;
+       Image image =  null;
+       try {
+           log.info("[getImageFromServer] formando url(httpImagen) ->{}",httpImagen);
+           url = new URL(httpImagen);
+           log.info("[getImageFromServer] leyendo la imagen desde servidor ->{}",httpImagen);
+           image = ImageIO.read(url);
+         
+        } catch (MalformedURLException ex) {
+            //ex.printStackTrace();
+            log.error("Error en getImageFromServer",ex);
+        }
+       catch (IOException ex) {
+              // ex.printStackTrace();
+               log.error("Error en getImageFromServer",ex);
+        }
+       return image;
+   }
    
     
 }
