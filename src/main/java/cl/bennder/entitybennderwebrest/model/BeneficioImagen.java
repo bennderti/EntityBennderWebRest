@@ -18,7 +18,7 @@ public class BeneficioImagen implements Serializable{
     private byte[] imagen;
     private Integer orden;//1 es considerado como imagen principal
     private String imagenBase64;
-    private String path;
+    private String path;// ruta de la imagen en servidor de aplicaciones publica via http
 
     public BeneficioImagen() {
     }
