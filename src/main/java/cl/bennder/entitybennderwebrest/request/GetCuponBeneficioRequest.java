@@ -35,6 +35,9 @@ public class GetCuponBeneficioRequest extends UserRequest{
     }
 
     public Integer getCantidad() {
+        if(cantidad == null){
+            this.cantidad = 1;
+        }
         return cantidad;
     }
 

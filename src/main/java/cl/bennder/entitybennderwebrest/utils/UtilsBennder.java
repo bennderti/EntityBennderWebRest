@@ -13,12 +13,7 @@ import java.io.IOException;
 import java.io.File;
 import java.io.FileInputStream;
 import java.net.MalformedURLException;
-import java.net.URI;
 import java.net.URL;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.imageio.ImageIO;
 import org.slf4j.LoggerFactory;
 
@@ -30,6 +25,51 @@ public class UtilsBennder {
     
     
     private static final org.slf4j.Logger log = LoggerFactory.getLogger(UtilsBennder.class);
+    
+    /***
+     * Método que genera digito verificador de rut
+     * @param rut Rut sin digito verificador
+     * @return Digito verificador
+     */
+    public static String generaDigitoVerificador(String rut) {
+        int factor = 2;
+        int suma = 0;
+        int cantidad = 0;
+        String verificador = "";
+        try {
+            if(rut!=null && !"".equals(rut) && !"".equals(rut.trim()) && rut.length()>0){
+                    rut = rut.replaceAll("\\.", "");
+                    if(rut.length() > 0){
+                        cantidad = rut.length();
+                        for (int i = cantidad; i > 0; i--) {
+                            if (factor > 7) {
+                                factor = 2;
+                            }
+                            suma += (Integer.parseInt(rut.substring((i - 1), i))) * factor;
+                            factor++;
+                        }
+                        if(suma!=0){
+                            verificador = String.valueOf(11 - suma % 11);
+                            if ((verificador.equals("10"))) {
+                                verificador = "K";
+                            }
+                            if (verificador.equals("11")) {
+                                verificador = "0";
+                            }           	
+                        }
+                    }
+                }
+            } 
+        catch (Exception e) {
+                    // TODO: handle exception
+            verificador = "";
+            log.error("Error en generaDigitoVerificador:",e);
+        }
+
+        return verificador;
+    }
+    
+    
     /***
      * Método que escribe byte array a url de destinto
      * @param bFile array de byte

@@ -5,6 +5,8 @@
  */
 package cl.bennder.entitybennderwebrest.model;
 
+import cl.bennder.entitybennderwebrest.utils.UtilsBennder;
+
 /**
  *
  * @author dyanez
@@ -13,15 +15,31 @@ public class Proveedor {
     private Integer idProveedor;
     private String nombre;
     private Integer rut;
-
+    private String rutDv;
+    private byte[] logo;
+    private String pathLogo;//path servidor
     public Proveedor() {
     }
 
-    public Proveedor(Integer idProveedor, String nombre, Integer rut) {
+
+    public Proveedor(Integer idProveedor, String nombre, Integer rut, String rutDv, String pathLogo) {
         this.idProveedor = idProveedor;
         this.nombre = nombre;
         this.rut = rut;
+        this.rutDv = rutDv;
+        this.pathLogo = pathLogo;
     }
+
+    public String getPathLogo() {
+        return pathLogo;
+    }
+
+    public void setPathLogo(String pathLogo) {
+        this.pathLogo = pathLogo;
+    }
+    
+    
+    
 
     public Integer getIdProveedor() {
         return idProveedor;
@@ -47,10 +65,35 @@ public class Proveedor {
         this.rut = rut;
     }
 
+    public String getRutDv() {
+        rutDv = ""+this.rut;
+        if(this.rut!=null){
+            String dv = UtilsBennder.generaDigitoVerificador(""+this.rut);
+            if(dv!=null && !"".equals(dv)){
+               rutDv =  this.rut +"-"+dv;
+            }
+        }
+        return rutDv;
+    }
+
+    public void setRutDv(String rutDv) {
+        this.rutDv = rutDv;
+    }
+
+    public byte[] getLogo() {
+        return logo;
+    }
+
+    public void setLogo(byte[] logo) {
+        this.logo = logo;
+    }
+
     @Override
     public String toString() {
-        return "Proveedor{" + "idProveedor=" + idProveedor + ", nombre=" + nombre + ", rut=" + rut + '}';
+        return "Proveedor{" + "idProveedor=" + idProveedor + ", nombre=" + nombre + ", rut=" + rut + ", rutDv=" + rutDv + ", pathLogo=" + pathLogo + '}';
     }
+    
+   
     
     
 }
