@@ -18,17 +18,24 @@ public class Proveedor {
     private String rutDv;
     private byte[] logo;
     private String pathLogo;//path servidor
+    private String urlLogo;//path servidor
+    private String nombreImagen;
     public Proveedor() {
     }
 
-
-    public Proveedor(Integer idProveedor, String nombre, Integer rut, String rutDv, String pathLogo) {
+    public Proveedor(Integer idProveedor, String nombre, Integer rut, String rutDv, String pathLogo, String urlLogo,byte[] logo,String nombreImagen) {
         this.idProveedor = idProveedor;
         this.nombre = nombre;
         this.rut = rut;
         this.rutDv = rutDv;
         this.pathLogo = pathLogo;
+        this.urlLogo = urlLogo;
+        this.logo = logo;
+        this.nombreImagen = nombreImagen;
     }
+
+
+    
 
     public String getPathLogo() {
         return pathLogo;
@@ -88,10 +95,30 @@ public class Proveedor {
         this.logo = logo;
     }
 
+    public String getUrlLogo() {
+        return urlLogo;
+    }
+
+    public void setUrlLogo(String urlLogo) {
+        this.urlLogo = urlLogo;
+    }
+
+    public String getNombreImagen() {
+        return nombreImagen;
+    }
+
+    public void setNombreImagen(String nombreImagen) {
+        this.nombreImagen = nombreImagen;
+    }
+
     @Override
     public String toString() {
-        return "Proveedor{" + "idProveedor=" + idProveedor + ", nombre=" + nombre + ", rut=" + rut + ", rutDv=" + rutDv + ", pathLogo=" + pathLogo + '}';
+        return "Proveedor{" + "idProveedor=" + idProveedor + ", nombre=" + nombre + ", rut=" + rut + ", rutDv=" + rutDv + ", pathLogo=" + pathLogo + ", urlLogo=" + urlLogo + ", nombreImagen=" + nombreImagen + '}';
     }
+
+    
+    
+    
     
    
     

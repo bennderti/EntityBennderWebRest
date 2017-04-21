@@ -14,7 +14,7 @@ import java.util.List;
  */
 public class CanjeaCuponResponse extends ValidacionResponse{
     private List<SucursalProveedor> sucursales;
-
+    private String urlLogoProveedor;
     public CanjeaCuponResponse() {
     }
 
@@ -29,5 +29,14 @@ public class CanjeaCuponResponse extends ValidacionResponse{
     public void setSucursales(List<SucursalProveedor> sucursales) {
         this.sucursales = sucursales;
     }
+
+    public String getUrlLogoProveedor() {
+        return urlLogoProveedor;
+    }
+
+    public void setUrlLogoProveedor(String urlLogoProveedor) {
+        this.urlLogoProveedor = urlLogoProveedor;
+    }
+    
     
 }

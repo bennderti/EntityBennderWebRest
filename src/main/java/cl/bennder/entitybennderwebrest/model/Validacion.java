@@ -16,9 +16,9 @@ public class Validacion implements Serializable{
     private String codigoNegocio;//0: Indica exito, y otro distino es para comportamiento a futuro
     private String mensaje;
     public Validacion() {
-        this.codigo = "1";
-        this.codigoNegocio = "0";
-        this.mensaje = "Error en validación";
+//        this.codigo = "1";
+//        this.codigoNegocio = "0";
+//        this.mensaje = "Error en validación";
     }
     
     public Validacion(String codigo, String codigoNegocio, String mensaje) {
