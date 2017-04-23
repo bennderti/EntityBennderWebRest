@@ -10,6 +10,12 @@ public class BeneficioRequest extends UserRequest {
     public BeneficioRequest() {
     }
 
+    public BeneficioRequest(Integer idBeneficio, Integer idUsuario) {
+        super(idUsuario);
+        this.idBeneficio = idBeneficio;
+    }
+    
+
     public BeneficioRequest(Integer idBeneficio) {
         this.idBeneficio = idBeneficio;
     }
