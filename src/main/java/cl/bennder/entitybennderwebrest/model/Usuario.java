@@ -5,7 +5,10 @@
  */
 package cl.bennder.entitybennderwebrest.model;
 
+import sun.misc.Perf;
+
 import java.util.Date;
+import java.util.List;
 
 /**
  *
@@ -22,6 +25,9 @@ public class Usuario {
     private Contacto contacto;    
     private String usuario;
     private Integer idEstado;
+    private String password;
+    private Boolean habilitado;
+    private List<Perfil> perfiles;
 
     public Usuario() {
        
@@ -97,5 +103,29 @@ public class Usuario {
 
     public void setIdEstado(Integer idEstado) {
         this.idEstado = idEstado;
-    }    
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public List<Perfil> getPerfiles() {
+        return perfiles;
+    }
+
+    public void setPerfiles(List<Perfil> perfiles) {
+        this.perfiles = perfiles;
+    }
+
+    public Boolean getHabilitado() {
+        return habilitado;
+    }
+
+    public void setHabilitado(Boolean habilitado) {
+        this.habilitado = habilitado;
+    }
 }
