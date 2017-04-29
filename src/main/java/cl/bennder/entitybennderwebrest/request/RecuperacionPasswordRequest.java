@@ -13,10 +13,16 @@ import java.io.Serializable;
  */
 public class RecuperacionPasswordRequest implements Serializable{
     private String usuarioCorreo;// correo de destino al que se envia la contraseña
+    private String index;
 
     public RecuperacionPasswordRequest(String usuarioCorreo) {
         this.usuarioCorreo = usuarioCorreo;
     }
+    public RecuperacionPasswordRequest(String usuarioCorreo, String index) {
+        this.usuarioCorreo = usuarioCorreo;
+        this.index = index;
+    }
+    
 
     public RecuperacionPasswordRequest() {
     }
@@ -28,11 +34,20 @@ public class RecuperacionPasswordRequest implements Serializable{
     public void setUsuarioCorreo(String usuarioCorreo) {
         this.usuarioCorreo = usuarioCorreo;
     }
+    public String getIndex() {
+        return index;
+    }
+
+    public void setIndex(String index) {
+        this.index = index;
+    }
 
     @Override
     public String toString() {
-        return "RecuperacionPasswordRequest{" + "usuarioCorreo=" + usuarioCorreo + '}';
+        return "RecuperacionPasswordRequest{" + "usuarioCorreo=" + usuarioCorreo + ", index=" + index + '}';
     }
+
+    
     
     
     

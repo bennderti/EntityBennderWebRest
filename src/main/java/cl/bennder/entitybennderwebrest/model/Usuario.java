@@ -22,6 +22,7 @@ public class Usuario {
     private Contacto contacto;    
     private String usuario;
     private Integer idEstado;
+    private Boolean habilitado;
 
     public Usuario() {
        
@@ -97,5 +98,16 @@ public class Usuario {
 
     public void setIdEstado(Integer idEstado) {
         this.idEstado = idEstado;
-    }    
+    }  
+
+    public Boolean getHabilitado() {
+        return habilitado;
+    }
+
+    public void setHabilitado(Boolean habilitado) {
+        this.habilitado = habilitado;
+    }
+
+    
+    
 }
