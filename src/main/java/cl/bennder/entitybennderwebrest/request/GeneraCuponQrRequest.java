@@ -18,8 +18,8 @@ public class GeneraCuponQrRequest extends UserRequest{
         this.codigoBeneficioEncriptado = codigoBeneficioEncriptado;
     }
 
-    public GeneraCuponQrRequest(String codigoBeneficioEncriptado, Integer idUsuario) {
-        super(idUsuario);
+    public GeneraCuponQrRequest(String token, String codigoBeneficioEncriptado) {
+        super(token);
         this.codigoBeneficioEncriptado = codigoBeneficioEncriptado;
     }
 

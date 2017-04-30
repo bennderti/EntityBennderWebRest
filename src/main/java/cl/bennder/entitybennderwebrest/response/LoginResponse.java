@@ -6,15 +6,16 @@
 package cl.bennder.entitybennderwebrest.response;
 
 import cl.bennder.entitybennderwebrest.model.Validacion;
+
 import java.io.Serializable;
 
 /**
- *
  * @author dyanez
  */
- public class LoginResponse extends ValidacionResponse implements Serializable{
+public class LoginResponse extends ValidacionResponse implements Serializable {
     private Integer idUsuario;//rut sin dv
     private Integer idEstadoUsuario;
+    private String token;
 
     public LoginResponse(Integer idUsuario) {
         this.idUsuario = idUsuario;
@@ -27,18 +28,10 @@ import java.io.Serializable;
 
     public LoginResponse() {
     }
-    
-    //se dejó de esta manera, como una de las mejores prácticas y así instanciar sólo cuando se utilice
-//    public Validacion getValidacion() {
-//        if(validacion == null){
-//            validacion = new Validacion();
-//        }
-//        return validacion;
-//    }
-//
-//    public void setValidacion(Validacion validacion) {
-//        this.validacion = validacion;
-//    }
+
+    public LoginResponse(String token) {
+        this.token = token;
+    }
 
     public Integer getIdUsuario() {
         return idUsuario;
@@ -59,5 +52,13 @@ import java.io.Serializable;
 
     public void setIdEstadoUsuario(Integer idEstadoUsuario) {
         this.idEstadoUsuario = idEstadoUsuario;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
     }
 }

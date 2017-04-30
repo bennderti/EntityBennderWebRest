@@ -14,6 +14,10 @@ import java.io.Serializable;
 public class CategoriasRequest extends UserRequest {
     private String nombreCategoria;
 
+    public CategoriasRequest(String token) {
+        super(token);
+    }
+
     public String getNombreCategoria() {
         return nombreCategoria;
     }

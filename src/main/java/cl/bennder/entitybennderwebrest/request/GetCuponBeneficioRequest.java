@@ -21,8 +21,8 @@ public class GetCuponBeneficioRequest extends UserRequest{
         this.idBeneficio = idBeneficio;
     }
 
-    public GetCuponBeneficioRequest(Integer idBeneficio, Integer idUsuario) {
-        super(idUsuario);
+    public GetCuponBeneficioRequest(String token, Integer idBeneficio) {
+        super(token);
         this.idBeneficio = idBeneficio;
     }
 

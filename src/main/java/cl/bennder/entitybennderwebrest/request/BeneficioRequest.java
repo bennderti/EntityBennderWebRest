@@ -10,11 +10,10 @@ public class BeneficioRequest extends UserRequest {
     public BeneficioRequest() {
     }
 
-    public BeneficioRequest(Integer idBeneficio, Integer idUsuario) {
-        super(idUsuario);
+    public BeneficioRequest(String token, Integer idBeneficio) {
+        super(token);
         this.idBeneficio = idBeneficio;
     }
-    
 
     public BeneficioRequest(Integer idBeneficio) {
         this.idBeneficio = idBeneficio;

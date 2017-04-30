@@ -15,8 +15,8 @@ public class CanjeaCuponRequest extends UserRequest{
     public CanjeaCuponRequest() {
     }
 
-    public CanjeaCuponRequest(String codigoBeneficioEncriptado, Integer idUsuario) {
-        super(idUsuario);
+    public CanjeaCuponRequest(String token, String codigoBeneficioEncriptado) {
+        super(token);
         this.codigoBeneficioEncriptado = codigoBeneficioEncriptado;
     }
 

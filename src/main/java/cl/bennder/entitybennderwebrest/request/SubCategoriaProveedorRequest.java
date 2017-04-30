@@ -21,8 +21,8 @@ public class SubCategoriaProveedorRequest extends UserRequest{
         this.idCategoria = idCategoria;
     }
 
-    public SubCategoriaProveedorRequest(Integer idProveedor, Integer idCategoria, Integer idUsuario) {
-        super(idUsuario);
+    public SubCategoriaProveedorRequest(String token, Integer idProveedor, Integer idCategoria) {
+        super(token);
         this.idProveedor = idProveedor;
         this.idCategoria = idCategoria;
     }
