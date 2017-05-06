@@ -11,7 +11,7 @@ import java.io.Serializable;
  *
  * @author dyanez
  */
-public class LoginRequest implements Serializable{
+public class LoginRequest extends UserRequest implements Serializable{
     private String user;
     private String password;
 

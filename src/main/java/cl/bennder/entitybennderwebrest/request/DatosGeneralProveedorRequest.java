@@ -21,8 +21,8 @@ public class DatosGeneralProveedorRequest extends UserRequest{
         this.proveedor = proveedor;
     }
 
-    public DatosGeneralProveedorRequest(Proveedor proveedor, Integer idUsuario) {
-        super(idUsuario);
+    public DatosGeneralProveedorRequest(String token, Proveedor proveedor) {
+        super(token);
         this.proveedor = proveedor;
     }
 
