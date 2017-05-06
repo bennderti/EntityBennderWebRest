@@ -10,9 +10,16 @@ package cl.bennder.entitybennderwebrest.model;
  * @author dyanez
  */
 public class SucursalProveedor{
+    private Integer idSucursal;
     private Integer idDireccion;
     private String nombreSucursal;
 
+    public SucursalProveedor(Integer idSucursal, Integer idDireccion, String nombreSucursal) {
+        this.idSucursal = idSucursal;
+        this.idDireccion = idDireccion;
+        this.nombreSucursal = nombreSucursal;
+    }
+    
     public SucursalProveedor(Integer idDireccion, String nombreSucursal) {
         this.idDireccion = idDireccion;
         this.nombreSucursal = nombreSucursal;
@@ -35,6 +42,14 @@ public class SucursalProveedor{
 
     public void setNombreSucursal(String nombreSucursal) {
         this.nombreSucursal = nombreSucursal;
+    }
+
+    public Integer getIdSucursal() {
+        return idSucursal;
+    }
+
+    public void setIdSucursal(Integer idSucursal) {
+        this.idSucursal = idSucursal;
     }
     
     
