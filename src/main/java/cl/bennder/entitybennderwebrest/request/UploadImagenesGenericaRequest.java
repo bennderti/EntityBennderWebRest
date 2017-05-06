@@ -23,8 +23,8 @@ public class UploadImagenesGenericaRequest extends UserRequest{
         this.imagenes = imagenes;
     }
 
-    public UploadImagenesGenericaRequest(List<ImagenGenerica> imagenes, Integer idUsuario) {
-        super(idUsuario);
+    public UploadImagenesGenericaRequest(List<ImagenGenerica> imagenes , String token) {
+        super(token);
         this.imagenes = imagenes;
     }
 
