@@ -5,8 +5,6 @@
  */
 package cl.bennder.entitybennderwebrest.request;
 
-import java.io.Serializable;
-
 /**
  *
  * @author dyanez
@@ -18,7 +16,6 @@ public class CategoriasRequest extends UserRequest {
     }
 
     public CategoriasRequest(String token) {
-        super(token);
     }
 
     public String getNombreCategoria() {

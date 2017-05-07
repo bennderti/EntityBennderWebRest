@@ -5,9 +5,10 @@
  */
 package cl.bennder.entitybennderwebrest.request;
 
-import cl.bennder.entitybennderwebrest.model.Beneficio;
 import cl.bennder.entitybennderwebrest.model.BeneficioImagen;
 import cl.bennder.entitybennderwebrest.model.TipoBeneficio;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -16,7 +17,7 @@ import java.util.List;
  *
  * @author dyanez
  */
-public class InfoBeneficioRequest extends UserRequest{
+public class InfoBeneficioRequest extends UserRequest {
     private Integer idBeneficio;
     private String titulo;
     private String descripcion;

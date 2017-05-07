@@ -12,19 +12,15 @@ import java.io.Serializable;
  * @author dyanez
  */
 public class UserRequest implements Serializable{
-    private String token;
+    private Integer idUsuario;
 
     public UserRequest(){}
 
-    public UserRequest(String token){
-        this.token = token;
+    public Integer getIdUsuario() {
+        return idUsuario;
     }
 
-    public String getToken() {
-        return token;
-    }
-
-    public void setToken(String token) {
-        this.token = token;
+    public void setIdUsuario(Integer idUsuario) {
+        this.idUsuario = idUsuario;
     }
 }

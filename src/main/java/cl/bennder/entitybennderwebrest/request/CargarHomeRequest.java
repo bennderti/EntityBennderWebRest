@@ -9,6 +9,6 @@ package cl.bennder.entitybennderwebrest.request;
  *
  * @author Marcos
  */
-public class CargarHomeRequest extends UserRequest{
+public class CargarHomeRequest extends UserRequest {
     
 }

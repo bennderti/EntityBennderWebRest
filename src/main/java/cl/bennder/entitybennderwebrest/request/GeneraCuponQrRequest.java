@@ -9,7 +9,7 @@ package cl.bennder.entitybennderwebrest.request;
  *
  * @author dyanez
  */
-public class GeneraCuponQrRequest extends UserRequest{
+public class GeneraCuponQrRequest extends UserRequest {
     private String codigoBeneficioEncriptado;
     public GeneraCuponQrRequest() {
     }
@@ -19,7 +19,6 @@ public class GeneraCuponQrRequest extends UserRequest{
     }
 
     public GeneraCuponQrRequest(String token, String codigoBeneficioEncriptado) {
-        super(token);
         this.codigoBeneficioEncriptado = codigoBeneficioEncriptado;
     }
 

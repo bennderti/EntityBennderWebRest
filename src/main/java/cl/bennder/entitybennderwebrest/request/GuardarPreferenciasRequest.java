@@ -5,7 +5,6 @@
  */
 package cl.bennder.entitybennderwebrest.request;
 
-import java.io.Serializable;
 import cl.bennder.entitybennderwebrest.model.Categoria;
 import java.util.List;
 
@@ -13,7 +12,7 @@ import java.util.List;
  *
  * @author Marcos
  */
-public class GuardarPreferenciasRequest implements Serializable {
+public class GuardarPreferenciasRequest extends UserRequest {
     
     private String emailAdicional;
     private Integer fonoAdicional;

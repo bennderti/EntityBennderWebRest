@@ -7,11 +7,13 @@ package cl.bennder.entitybennderwebrest.request;
 
 import cl.bennder.entitybennderwebrest.model.Proveedor;
 
+import java.io.Serializable;
+
 /**
  *
  * @author dyanez
  */
-public class DatosGeneralProveedorRequest extends UserRequest{
+public class DatosGeneralProveedorRequest extends UserRequest {
     private Proveedor proveedor;
 
     public DatosGeneralProveedorRequest() {
@@ -22,7 +24,6 @@ public class DatosGeneralProveedorRequest extends UserRequest{
     }
 
     public DatosGeneralProveedorRequest(String token, Proveedor proveedor) {
-        super(token);
         this.proveedor = proveedor;
     }
 

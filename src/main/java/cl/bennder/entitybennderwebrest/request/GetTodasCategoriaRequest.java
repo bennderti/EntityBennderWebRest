@@ -5,11 +5,13 @@
  */
 package cl.bennder.entitybennderwebrest.request;
 
+import java.io.Serializable;
+
 /**
  *
  * @author dyanez
  */
-public class GetTodasCategoriaRequest extends UserRequest{
+public class GetTodasCategoriaRequest extends UserRequest {
 
     public GetTodasCategoriaRequest() {
     }

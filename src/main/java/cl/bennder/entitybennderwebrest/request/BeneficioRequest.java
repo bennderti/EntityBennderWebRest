@@ -3,7 +3,7 @@ package cl.bennder.entitybennderwebrest.request;
 /**
  * Created by Diego on 26-03-2017.
  */
-public class BeneficioRequest extends UserRequest {
+public class BeneficioRequest extends UserRequest{
 
     private Integer idBeneficio;
 
@@ -11,7 +11,6 @@ public class BeneficioRequest extends UserRequest {
     }
 
     public BeneficioRequest(String token, Integer idBeneficio) {
-        super(token);
         this.idBeneficio = idBeneficio;
     }
 

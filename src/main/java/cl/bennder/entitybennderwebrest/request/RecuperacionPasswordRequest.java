@@ -5,13 +5,12 @@
  */
 package cl.bennder.entitybennderwebrest.request;
 
-import java.io.Serializable;
 
 /**
  *
  * @author dyanez
  */
-public class RecuperacionPasswordRequest implements Serializable{
+public class RecuperacionPasswordRequest extends UserRequest {
     private String usuarioCorreo;// correo de destino al que se envia la contraseña
     private String index;
 

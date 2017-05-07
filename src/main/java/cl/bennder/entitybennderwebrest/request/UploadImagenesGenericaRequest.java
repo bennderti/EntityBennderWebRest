@@ -6,6 +6,8 @@
 package cl.bennder.entitybennderwebrest.request;
 
 import cl.bennder.entitybennderwebrest.model.ImagenGenerica;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +15,7 @@ import java.util.List;
  *
  * @author dyanez
  */
-public class UploadImagenesGenericaRequest extends UserRequest{
+public class UploadImagenesGenericaRequest extends UserRequest {
     private List<ImagenGenerica> imagenes;
 
     public UploadImagenesGenericaRequest() {
@@ -24,7 +26,6 @@ public class UploadImagenesGenericaRequest extends UserRequest{
     }
 
     public UploadImagenesGenericaRequest(List<ImagenGenerica> imagenes , String token) {
-        super(token);
         this.imagenes = imagenes;
     }
 

@@ -9,7 +9,7 @@ package cl.bennder.entitybennderwebrest.request;
  *
  * @author dyanez
  */
-public class CategoriaByIdRequest{
+public class CategoriaByIdRequest extends UserRequest {
     private Integer idCategoria;
 
     public CategoriaByIdRequest() {

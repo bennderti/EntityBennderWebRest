@@ -14,7 +14,7 @@ import java.util.List;
  *
  * @author dyanez
  */
-public class UploadBeneficioImagenRequest implements Serializable{
+public class UploadBeneficioImagenRequest extends UserRequest {
     private Integer idProveedor;
     private List<BeneficioImagen> beneficioImagenes;
 

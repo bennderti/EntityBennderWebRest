@@ -9,7 +9,7 @@ package cl.bennder.entitybennderwebrest.request;
  *
  * @author dyanez
  */
-public class GetCuponBeneficioRequest extends UserRequest{
+public class GetCuponBeneficioRequest extends UserRequest {
     private Integer idBeneficio;
     private Integer cantidad;
 
@@ -22,7 +22,6 @@ public class GetCuponBeneficioRequest extends UserRequest{
     }
 
     public GetCuponBeneficioRequest(String token, Integer idBeneficio) {
-        super(token);
         this.idBeneficio = idBeneficio;
     }
 

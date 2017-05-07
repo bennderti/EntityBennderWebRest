@@ -9,7 +9,7 @@ package cl.bennder.entitybennderwebrest.request;
  *
  * @author dyanez
  */
-public class ProveedorIdRequest {
+public class ProveedorIdRequest extends UserRequest {
     private Integer idProveedor;
 
     public ProveedorIdRequest() {

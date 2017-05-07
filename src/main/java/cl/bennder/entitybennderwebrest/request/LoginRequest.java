@@ -5,13 +5,12 @@
  */
 package cl.bennder.entitybennderwebrest.request;
 
-import java.io.Serializable;
 
 /**
  *
  * @author dyanez
  */
-public class LoginRequest extends UserRequest implements Serializable{
+public class LoginRequest extends UserRequest {
     private String user;
     private String password;
 

@@ -9,7 +9,7 @@ package cl.bennder.entitybennderwebrest.request;
  *
  * @author dyanez
  */
-public class ValidacionCuponPOSRequest extends UserRequest{
+public class ValidacionCuponPOSRequest extends UserRequest {
     private String codigoCuponEncriptado;
     private Integer idVendedor;
     private Integer idDireccionSucursal;//id direccion de sucursal

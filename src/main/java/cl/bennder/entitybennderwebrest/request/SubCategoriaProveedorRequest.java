@@ -5,11 +5,12 @@
  */
 package cl.bennder.entitybennderwebrest.request;
 
+
 /**
  *
  * @author dyanez
  */
-public class SubCategoriaProveedorRequest extends UserRequest{
+public class SubCategoriaProveedorRequest extends UserRequest {
     private Integer idProveedor;
     private Integer idCategoria;
 
@@ -22,7 +23,6 @@ public class SubCategoriaProveedorRequest extends UserRequest{
     }
 
     public SubCategoriaProveedorRequest(String token, Integer idProveedor, Integer idCategoria) {
-        super(token);
         this.idProveedor = idProveedor;
         this.idCategoria = idCategoria;
     }

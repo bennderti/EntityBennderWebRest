@@ -3,7 +3,7 @@ package cl.bennder.entitybennderwebrest.request;
 /**
  * Created by Diego on 03-03-2017.
  */
-public class BeneficiosRequest extends  UserRequest {
+public class BeneficiosRequest extends UserRequest{
 
     private Integer idCategoria;
 
