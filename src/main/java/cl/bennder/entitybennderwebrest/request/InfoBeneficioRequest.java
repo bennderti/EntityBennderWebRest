@@ -8,7 +8,6 @@ package cl.bennder.entitybennderwebrest.request;
 import cl.bennder.entitybennderwebrest.model.BeneficioImagen;
 import cl.bennder.entitybennderwebrest.model.TipoBeneficio;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;

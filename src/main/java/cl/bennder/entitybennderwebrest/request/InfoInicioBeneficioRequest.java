@@ -15,6 +15,9 @@ import java.util.List;
  * @author dyanez
  */
 public class InfoInicioBeneficioRequest extends UserRequest{
+
+    public InfoInicioBeneficioRequest() {
+    }
     
     
 }
