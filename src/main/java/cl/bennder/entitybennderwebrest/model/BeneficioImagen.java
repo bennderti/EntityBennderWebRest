@@ -101,6 +101,11 @@ public class BeneficioImagen implements Serializable{
         this.urlImagen = urlImagen;
     }
 
+    @Override
+    public String toString() {
+        return "BeneficioImagen{" + "idBeneficio=" + idBeneficio + ", idImagen=" + idImagen + ", nombre=" + nombre + ", orden=" + orden + ", imagenBase64=" + imagenBase64 + ", path=" + path + ", urlImagen=" + urlImagen + '}';
+    }
+
     
     
     

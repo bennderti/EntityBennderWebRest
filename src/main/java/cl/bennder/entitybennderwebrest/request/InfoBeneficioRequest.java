@@ -6,6 +6,7 @@
 package cl.bennder.entitybennderwebrest.request;
 
 import cl.bennder.entitybennderwebrest.model.BeneficioImagen;
+import cl.bennder.entitybennderwebrest.model.ImagenGenerica;
 import cl.bennder.entitybennderwebrest.model.TipoBeneficio;
 
 import java.util.ArrayList;
@@ -22,7 +23,6 @@ public class InfoBeneficioRequest extends UserRequest {
     private String descripcion;
     private Date fechaCreacion;
     private Date fechaExpiracion;
-    private String condicion;
     private Boolean habilitado;
     private Integer calificacion;
     private Integer stock;
@@ -33,14 +33,20 @@ public class InfoBeneficioRequest extends UserRequest {
     private Integer limiteStock;
     private Integer visitasGeneral;
     private List<BeneficioImagen> imagenesBeneficio;
+    private List<ImagenGenerica> imagenesGenericas;
+    private Integer precioNormal;
+    private Integer precioOferta;
+    private Integer porcentajeDescuento;
+    private List<String> adicionales;
+    private List<String> condiciones; 
+    private List<Integer> sucursales;
 
-    public InfoBeneficioRequest(Integer idBeneficio, String titulo, String descripcion, Date fechaCreacion, Date fechaExpiracion, String condicion, Boolean habilitado, Integer calificacion, Integer stock, Integer idProveedor, String nombreProveedor, Integer idCategoria, TipoBeneficio tipoBeneficio, Integer limiteStock, Integer visitasGeneral, List<BeneficioImagen> imagenesBeneficio) {
+    public InfoBeneficioRequest(Integer idBeneficio, String titulo, String descripcion, Date fechaCreacion, Date fechaExpiracion, Boolean habilitado, Integer calificacion, Integer stock, Integer idProveedor, String nombreProveedor, Integer idCategoria, TipoBeneficio tipoBeneficio, Integer limiteStock, Integer visitasGeneral, List<BeneficioImagen> imagenesBeneficio, Integer precioNormal, Integer precioOferta, Integer porcentajeDescuento, List<String> adicionales, List<String> condiciones, List<Integer> sucursales) {
         this.idBeneficio = idBeneficio;
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.fechaCreacion = fechaCreacion;
         this.fechaExpiracion = fechaExpiracion;
-        this.condicion = condicion;
         this.habilitado = habilitado;
         this.calificacion = calificacion;
         this.stock = stock;
@@ -51,7 +57,15 @@ public class InfoBeneficioRequest extends UserRequest {
         this.limiteStock = limiteStock;
         this.visitasGeneral = visitasGeneral;
         this.imagenesBeneficio = imagenesBeneficio;
+        this.precioNormal = precioNormal;
+        this.precioOferta = precioOferta;
+        this.porcentajeDescuento = porcentajeDescuento;
+        this.adicionales = adicionales;
+        this.condiciones = condiciones;
+        this.sucursales = sucursales;
     }
+
+    
 
     public Integer getIdBeneficio() {
         return idBeneficio;
@@ -93,13 +107,6 @@ public class InfoBeneficioRequest extends UserRequest {
         this.fechaExpiracion = fechaExpiracion;
     }
 
-    public String getCondicion() {
-        return condicion;
-    }
-
-    public void setCondicion(String condicion) {
-        this.condicion = condicion;
-    }
 
     public Boolean getHabilitado() {
         return habilitado;
@@ -218,6 +225,71 @@ public class InfoBeneficioRequest extends UserRequest {
 
     public InfoBeneficioRequest() {
     }
+
+    public Integer getPrecioNormal() {
+        return precioNormal;
+    }
+
+    public void setPrecioNormal(Integer precioNormal) {
+        this.precioNormal = precioNormal;
+    }
+
+    public Integer getPrecioOferta() {
+        return precioOferta;
+    }
+
+    public void setPrecioOferta(Integer precioOferta) {
+        this.precioOferta = precioOferta;
+    }
+
+    public Integer getPorcentajeDescuento() {
+        return porcentajeDescuento;
+    }
+
+    public void setPorcentajeDescuento(Integer porcentajeDescuento) {
+        this.porcentajeDescuento = porcentajeDescuento;
+    }
+
+    public List<String> getAdicionales() {
+        return adicionales;
+    }
+
+    public void setAdicionales(List<String> adicionales) {
+        this.adicionales = adicionales;
+    }
+
+    public List<String> getCondiciones() {
+        return condiciones;
+    }
+
+    public void setCondiciones(List<String> condiciones) {
+        this.condiciones = condiciones;
+    }
+
+    public List<Integer> getSucursales() {
+        return sucursales;
+    }
+
+    public void setSucursales(List<Integer> sucursales) {
+        this.sucursales = sucursales;
+    }
+
+    public List<ImagenGenerica> getImagenesGenericas() {
+        if(imagenesGenericas == null){
+            imagenesGenericas = new ArrayList<>();
+        }
+        return imagenesGenericas;
+    }
+
+    public void setImagenesGenericas(List<ImagenGenerica> imagenesGenericas) {
+        this.imagenesGenericas = imagenesGenericas;
+    }
+
+    @Override
+    public String toString() {
+        return "InfoBeneficioRequest{" + "idBeneficio=" + idBeneficio + ", titulo=" + titulo + ", descripcion=" + descripcion + ", fechaCreacion=" + fechaCreacion + ", fechaExpiracion=" + fechaExpiracion + ", habilitado=" + habilitado + ", calificacion=" + calificacion + ", stock=" + stock + ", idProveedor=" + idProveedor + ", nombreProveedor=" + nombreProveedor + ", idCategoria=" + idCategoria + ", tipoBeneficio=" + tipoBeneficio + ", limiteStock=" + limiteStock + ", visitasGeneral=" + visitasGeneral + ", imagenesBeneficio=" + imagenesBeneficio + ", imagenesGenericas=" + imagenesGenericas + ", precioNormal=" + precioNormal + ", precioOferta=" + precioOferta + ", porcentajeDescuento=" + porcentajeDescuento + ", adicionales=" + adicionales + ", condiciones=" + condiciones + ", sucursales=" + sucursales + '}';
+    }
+    
     
     
 }

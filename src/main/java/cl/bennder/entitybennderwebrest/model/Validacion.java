@@ -51,5 +51,10 @@ public class Validacion implements Serializable{
         this.mensaje = mensaje;
     }
 
+    @Override
+    public String toString() {
+        return "Validacion{" + "codigo=" + codigo + ", codigoNegocio=" + codigoNegocio + ", mensaje=" + mensaje + '}';
+    }
+
     
 }

@@ -7,6 +7,7 @@ public class TipoBeneficio {
 
     private Integer idTipoBeneficio;
     private String nombre;
+    
 
     public Integer getIdTipoBeneficio() {
         return idTipoBeneficio;

@@ -33,6 +33,11 @@ public class ValidacionResponse implements Serializable{
     public void setValidacion(Validacion validacion) {
         this.validacion = validacion;
     }
+
+    @Override
+    public String toString() {
+        return "ValidacionResponse{" + "validacion=" + validacion + '}';
+    }
     
     
 }
