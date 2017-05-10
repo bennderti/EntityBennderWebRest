@@ -201,4 +201,11 @@ public class Beneficio implements Serializable{
     public void setNombreCategoria(String nombreCategoria) {
         this.nombreCategoria = nombreCategoria;
     }
+
+    @Override
+    public String toString() {
+        return "Beneficio{" + "idBeneficio=" + idBeneficio + ", titulo=" + titulo + ", descripcion=" + descripcion + ", fechaCreacion=" + fechaCreacion + ", fechaExpiracion=" + fechaExpiracion + ", condicion=" + condicion + ", habilitado=" + habilitado + ", calificacion=" + calificacion + ", stock=" + stock + ", idProveedor=" + idProveedor + ", nombreProveedor=" + nombreProveedor + ", idCategoria=" + idCategoria + ", nombreCategoria=" + nombreCategoria + ", tipoBeneficio=" + tipoBeneficio + ", limiteStock=" + limiteStock + ", visitasGeneral=" + visitasGeneral + ", imagenesBeneficio=" + imagenesBeneficio + ", condiciones=" + condiciones + '}';
+    }
+    
+    
 }
