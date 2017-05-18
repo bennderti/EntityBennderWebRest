@@ -14,6 +14,9 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import javax.imageio.ImageIO;
 import org.slf4j.LoggerFactory;
 
@@ -223,6 +226,47 @@ public class UtilsBennder {
         }
        return image;
    }
+   /***
+    * 
+    * @param formato formato de fecha
+    * @return 
+    */
+   public static String getFechaActualFormato(String formato){
+      String fecha = "";
+      //Calendar.getInstance().getTime()
+      formato = formato!=null?formato:"dd-MM-yyyy";
+      SimpleDateFormat formatoDelTexto = new SimpleDateFormat(formato);
+      fecha = formatoDelTexto.format(Calendar.getInstance().getTime());
+      return fecha;
+   }
+   /***
+    * 
+    * @param date
+    * @param formato
+    * @return 
+    */ 
+   public static String getFechaActualFormatoJavaDate(Date date,String formato){
+      String fecha = "";
+      //Calendar.getInstance().getTime()
+      formato = formato!=null?formato:"dd-MM-yyyy";
+      SimpleDateFormat formatoDelTexto = new SimpleDateFormat(formato);
+      fecha = formatoDelTexto.format(date);
+      return fecha;
+   }
    
+   /***
+    * 
+    * @param date
+    * @param formato
+    * @return 
+    */
+    public static String getFechaActualFormatoSqlDate(java.sql.Date date,String formato){
+      String fecha = "";
+      //Calendar.getInstance().getTime()
+      formato = formato!=null?formato:"dd-MM-yyyy";
+      SimpleDateFormat formatoDelTexto = new SimpleDateFormat(formato);
+      fecha = formatoDelTexto.format(new Date(date.getTime()));
+      return fecha;
+   }
     
 }

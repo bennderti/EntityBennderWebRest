@@ -6,7 +6,9 @@
 package cl.bennder.entitybennderwebrest.response;
 
 import cl.bennder.entitybennderwebrest.model.Categoria;
+import cl.bennder.entitybennderwebrest.model.Comuna;
 import cl.bennder.entitybennderwebrest.model.ImagenGenerica;
+import cl.bennder.entitybennderwebrest.model.Region;
 import cl.bennder.entitybennderwebrest.model.SucursalProveedor;
 import cl.bennder.entitybennderwebrest.model.Validacion;
 import java.util.ArrayList;
@@ -20,6 +22,8 @@ public class InfoInicioBeneficioResponse extends ValidacionResponse{
     private List<Categoria> categorias;
     private List<SucursalProveedor> sucursales;
     private List<ImagenGenerica> imgenesGenericas;
+    private List<Region> regionesSucursal;
+    private List<Comuna> comunasSucursales;
     public InfoInicioBeneficioResponse() {
     }
 
@@ -61,6 +65,22 @@ public class InfoInicioBeneficioResponse extends ValidacionResponse{
 
     public void setImgenesGenericas(List<ImagenGenerica> imgenesGenericas) {
         this.imgenesGenericas = imgenesGenericas;
+    }
+
+    public List<Region> getRegionesSucursal() {
+        return regionesSucursal;
+    }
+
+    public void setRegionesSucursal(List<Region> regionesSucursal) {
+        this.regionesSucursal = regionesSucursal;
+    }
+
+    public List<Comuna> getComunasSucursales() {
+        return comunasSucursales;
+    }
+
+    public void setComunasSucursales(List<Comuna> comunasSucursales) {
+        this.comunasSucursales = comunasSucursales;
     }
     
     
