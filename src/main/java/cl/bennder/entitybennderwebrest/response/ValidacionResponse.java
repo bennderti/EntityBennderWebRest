@@ -17,6 +17,7 @@ public class ValidacionResponse implements Serializable{
     private Validacion validacion;
 
     public ValidacionResponse() {
+        validacion = new Validacion();
     }
 
     public ValidacionResponse(Validacion validacion) {
