@@ -23,6 +23,7 @@ public class Beneficio implements Serializable{
     private String titulo;
     private String descripcion;
     private Date fechaCreacion;
+    private Date fechaInicial;
     private Date fechaExpiracion;
     private String condicion;
     private Boolean habilitado;
@@ -202,6 +203,14 @@ public class Beneficio implements Serializable{
         this.nombreCategoria = nombreCategoria;
     }
 
+    public Date getFechaInicial() {
+        return fechaInicial;
+    }
+
+    public void setFechaInicial(Date fechaInicial) {
+        this.fechaInicial = fechaInicial;
+    }
+    
     @Override
     public String toString() {
         return "Beneficio{" + "idBeneficio=" + idBeneficio + ", titulo=" + titulo + ", descripcion=" + descripcion + ", fechaCreacion=" + fechaCreacion + ", fechaExpiracion=" + fechaExpiracion + ", condicion=" + condicion + ", habilitado=" + habilitado + ", calificacion=" + calificacion + ", stock=" + stock + ", idProveedor=" + idProveedor + ", nombreProveedor=" + nombreProveedor + ", idCategoria=" + idCategoria + ", nombreCategoria=" + nombreCategoria + ", tipoBeneficio=" + tipoBeneficio + ", limiteStock=" + limiteStock + ", visitasGeneral=" + visitasGeneral + ", imagenesBeneficio=" + imagenesBeneficio + ", condiciones=" + condiciones + '}';
