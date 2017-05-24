@@ -18,8 +18,8 @@ public class Descuento extends Beneficio implements Serializable{
     }
     
 
-    public Descuento(Integer idBeneficio, String titulo, String descripcion, Date fechaCreacion, Date fechaExpiracion, String condicion, Boolean habilitado, Integer calificacion, Integer stock, Integer idProveedor, Integer idCategoria, TipoBeneficio tipoBeneficio, Integer limiteStock, Integer visitasGeneral, Integer porcentajeDescuento) {
-        super(idBeneficio, titulo, descripcion, fechaCreacion, fechaExpiracion, condicion, habilitado, calificacion, stock, idProveedor, idCategoria, tipoBeneficio, limiteStock, visitasGeneral);
+    public Descuento(Integer idBeneficio, String titulo, String descripcion, Date fechaCreacion, Date fechaExpiracion, String condicion, Boolean habilitado, Integer calificacion, Integer stock, Integer idProveedor, Integer idCategoria, TipoBeneficio tipoBeneficio, Integer limiteStock, Integer visitasGeneral, Integer porcentajeDescuento,boolean tieneImagenGenerica) {
+        super(idBeneficio, titulo, descripcion, fechaCreacion, fechaExpiracion, condicion, habilitado, calificacion, stock, idProveedor, idCategoria, tipoBeneficio, limiteStock, visitasGeneral,tieneImagenGenerica);
         this.porcentajeDescuento = porcentajeDescuento;
     }
 

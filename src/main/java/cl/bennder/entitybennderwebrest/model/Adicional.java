@@ -22,8 +22,8 @@ public class Adicional extends Beneficio{
         this.descripciones = descripciones;
     }
 
-    public Adicional(List<String> descripciones, Integer idBeneficio, String titulo, String descripcion, Date fechaCreacion, Date fechaExpiracion, String condicion, Boolean habilitado, Integer calificacion, Integer stock, Integer idProveedor, Integer idCategoria, TipoBeneficio tipoBeneficio, Integer limiteStock, Integer visitasGeneral) {
-        super(idBeneficio, titulo, descripcion, fechaCreacion, fechaExpiracion, condicion, habilitado, calificacion, stock, idProveedor, idCategoria, tipoBeneficio, limiteStock, visitasGeneral);
+    public Adicional(List<String> descripciones, Integer idBeneficio, String titulo, String descripcion, Date fechaCreacion, Date fechaExpiracion, String condicion, Boolean habilitado, Integer calificacion, Integer stock, Integer idProveedor, Integer idCategoria, TipoBeneficio tipoBeneficio, Integer limiteStock, Integer visitasGeneral,boolean tieneImagenGenerica) {
+        super(idBeneficio, titulo, descripcion, fechaCreacion, fechaExpiracion, condicion, habilitado, calificacion, stock, idProveedor, idCategoria, tipoBeneficio, limiteStock, visitasGeneral,tieneImagenGenerica);
         this.descripciones = descripciones;
     }
 

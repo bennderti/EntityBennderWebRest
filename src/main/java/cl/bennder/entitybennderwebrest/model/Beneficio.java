@@ -38,15 +38,17 @@ public class Beneficio implements Serializable{
     private Integer visitasGeneral;
     private List<BeneficioImagen> imagenesBeneficio;
     private List<String> condiciones;
+    private boolean tieneImagenGenerica;
 
     public Beneficio() {
+        this.tieneImagenGenerica = false;
     }
 
-    public Beneficio(Integer idBeneficio, String titulo, String descripcion, Date fechaCreacion, Date fechaExpiracion, String condicion, Boolean habilitado, Integer calificacion, Integer stock, Integer idProveedor, Integer idCategoria, TipoBeneficio tipoBeneficio, Integer limiteStock, Integer visitasGeneral) {
+    public Beneficio(Integer idBeneficio, String titulo, String descripcion, Date fechaInicial, Date fechaExpiracion, String condicion, Boolean habilitado, Integer calificacion, Integer stock, Integer idProveedor, Integer idCategoria, TipoBeneficio tipoBeneficio, Integer limiteStock, Integer visitasGeneral,boolean tieneImagenGenerica) {
         this.idBeneficio = idBeneficio;
         this.titulo = titulo;
         this.descripcion = descripcion;
-        this.fechaCreacion = fechaCreacion;
+        this.fechaInicial = fechaInicial;
         this.fechaExpiracion = fechaExpiracion;
         this.condicion = condicion;
         this.habilitado = habilitado;
@@ -57,6 +59,7 @@ public class Beneficio implements Serializable{
         this.tipoBeneficio = tipoBeneficio;
         this.limiteStock = limiteStock;
         this.visitasGeneral = visitasGeneral;
+        this.tieneImagenGenerica = false;
     }
 
     public Integer getIdBeneficio() {
@@ -89,6 +92,14 @@ public class Beneficio implements Serializable{
 
     public void setFechaCreacion(Date fechaCreacion) {
         this.fechaCreacion = fechaCreacion;
+    }
+
+    public boolean isTieneImagenGenerica() {
+        return tieneImagenGenerica;
+    }
+
+    public void setTieneImagenGenerica(boolean tieneImagenGenerica) {
+        this.tieneImagenGenerica = tieneImagenGenerica;
     }
 
     public Date getFechaExpiracion() {
@@ -210,11 +221,12 @@ public class Beneficio implements Serializable{
     public void setFechaInicial(Date fechaInicial) {
         this.fechaInicial = fechaInicial;
     }
-    
+
     @Override
     public String toString() {
-        return "Beneficio{" + "idBeneficio=" + idBeneficio + ", titulo=" + titulo + ", descripcion=" + descripcion + ", fechaCreacion=" + fechaCreacion + ", fechaExpiracion=" + fechaExpiracion + ", condicion=" + condicion + ", habilitado=" + habilitado + ", calificacion=" + calificacion + ", stock=" + stock + ", idProveedor=" + idProveedor + ", nombreProveedor=" + nombreProveedor + ", idCategoria=" + idCategoria + ", nombreCategoria=" + nombreCategoria + ", tipoBeneficio=" + tipoBeneficio + ", limiteStock=" + limiteStock + ", visitasGeneral=" + visitasGeneral + ", imagenesBeneficio=" + imagenesBeneficio + ", condiciones=" + condiciones + '}';
+        return "Beneficio{" + "idBeneficio=" + idBeneficio + ", titulo=" + titulo + ", descripcion=" + descripcion + ", fechaCreacion=" + fechaCreacion + ", fechaInicial=" + fechaInicial + ", fechaExpiracion=" + fechaExpiracion + ", condicion=" + condicion + ", habilitado=" + habilitado + ", calificacion=" + calificacion + ", stock=" + stock + ", idProveedor=" + idProveedor + ", nombreProveedor=" + nombreProveedor + ", idCategoria=" + idCategoria + ", nombreCategoria=" + nombreCategoria + ", tipoBeneficio=" + tipoBeneficio + ", limiteStock=" + limiteStock + ", visitasGeneral=" + visitasGeneral + ", imagenesBeneficio=" + imagenesBeneficio + ", condiciones=" + condiciones + ", tieneImagenGenerica=" + tieneImagenGenerica + '}';
     }
+    
     
     
 }

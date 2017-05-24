@@ -11,6 +11,7 @@ import cl.bennder.entitybennderwebrest.model.ImagenGenerica;
 import cl.bennder.entitybennderwebrest.model.Region;
 import cl.bennder.entitybennderwebrest.model.SucursalProveedor;
 import cl.bennder.entitybennderwebrest.model.Validacion;
+import cl.bennder.entitybennderwebrest.request.InfoBeneficioRequest;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,6 +25,7 @@ public class InfoInicioBeneficioResponse extends ValidacionResponse{
     private List<ImagenGenerica> imgenesGenericas;
     private List<Region> regionesSucursal;
     private List<Comuna> comunasSucursales;
+    private InfoBeneficioRequest datosBeneficio;
     public InfoInicioBeneficioResponse() {
     }
 
@@ -81,6 +83,14 @@ public class InfoInicioBeneficioResponse extends ValidacionResponse{
 
     public void setComunasSucursales(List<Comuna> comunasSucursales) {
         this.comunasSucursales = comunasSucursales;
+    }
+
+    public InfoBeneficioRequest getDatosBeneficio() {
+        return datosBeneficio;
+    }
+
+    public void setDatosBeneficio(InfoBeneficioRequest datosBeneficio) {
+        this.datosBeneficio = datosBeneficio;
     }
     
     
