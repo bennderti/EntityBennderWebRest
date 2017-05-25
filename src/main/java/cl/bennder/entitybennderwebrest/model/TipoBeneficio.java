@@ -24,4 +24,11 @@ public class TipoBeneficio {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
+    @Override
+    public String toString() {
+        return "TipoBeneficio{" + "idTipoBeneficio=" + idTipoBeneficio + ", nombre=" + nombre + '}';
+    }
+    
+    
 }
