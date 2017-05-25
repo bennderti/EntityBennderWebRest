@@ -39,6 +39,7 @@ public class Beneficio implements Serializable{
     private List<BeneficioImagen> imagenesBeneficio;
     private List<String> condiciones;
     private boolean tieneImagenGenerica;
+    
 
     public Beneficio() {
         this.tieneImagenGenerica = false;
