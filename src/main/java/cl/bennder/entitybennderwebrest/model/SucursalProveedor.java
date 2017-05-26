@@ -14,6 +14,7 @@ public class SucursalProveedor{
     private Integer idDireccion;
     private Integer idComuna;
     private String nombreSucursal;
+    private Integer selected;
 
     public SucursalProveedor(Integer idSucursal, Integer idDireccion, String nombreSucursal) {
         this.idSucursal = idSucursal;
@@ -60,6 +61,15 @@ public class SucursalProveedor{
     public void setIdComuna(Integer idComuna) {
         this.idComuna = idComuna;
     }
+
+    public Integer getSelected() {
+        return selected;
+    }
+
+    public void setSelected(Integer selected) {
+        this.selected = selected;
+    }
+    
     
     
 }

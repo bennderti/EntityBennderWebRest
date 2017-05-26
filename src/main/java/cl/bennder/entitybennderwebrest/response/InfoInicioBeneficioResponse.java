@@ -21,6 +21,7 @@ import java.util.List;
  */
 public class InfoInicioBeneficioResponse extends ValidacionResponse{
     private List<Categoria> categorias;
+    
     private List<SucursalProveedor> sucursales;
     private List<ImagenGenerica> imgenesGenericas;
     private List<Region> regionesSucursal;
