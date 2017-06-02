@@ -27,6 +27,7 @@ public class InfoInicioBeneficioResponse extends ValidacionResponse{
     private List<Region> regionesSucursal;
     private List<Comuna> comunasSucursales;
     private InfoBeneficioRequest datosBeneficio;
+    private Integer maxImagenes;
     public InfoInicioBeneficioResponse() {
     }
 
@@ -92,6 +93,14 @@ public class InfoInicioBeneficioResponse extends ValidacionResponse{
 
     public void setDatosBeneficio(InfoBeneficioRequest datosBeneficio) {
         this.datosBeneficio = datosBeneficio;
+    }
+
+    public Integer getMaxImagenes() {
+        return maxImagenes;
+    }
+
+    public void setMaxImagenes(Integer maxImagenes) {
+        this.maxImagenes = maxImagenes;
     }
     
     
