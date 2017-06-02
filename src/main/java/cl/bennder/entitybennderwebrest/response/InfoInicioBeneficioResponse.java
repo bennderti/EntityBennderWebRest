@@ -29,6 +29,7 @@ public class InfoInicioBeneficioResponse extends ValidacionResponse{
     private InfoBeneficioRequest datosBeneficio;
     private Integer maxImagenes;
     public InfoInicioBeneficioResponse() {
+        this.maxImagenes = 4;
     }
 
     public InfoInicioBeneficioResponse(List<Categoria> categorias, List<SucursalProveedor> sucursales, List<ImagenGenerica> imgenesGenericas) {
@@ -42,6 +43,7 @@ public class InfoInicioBeneficioResponse extends ValidacionResponse{
         this.categorias = categorias;
         this.sucursales = sucursales;
         this.imgenesGenericas = imgenesGenericas;
+        
     }
 
     public List<Categoria> getCategorias() {
