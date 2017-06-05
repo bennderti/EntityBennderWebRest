@@ -11,12 +11,13 @@ package cl.bennder.entitybennderwebrest.model;
  */
 public class Direccion {
     
+    private Integer idDireccion;
     private String calle;
     private String numero;
     private String departamento;
     private String villa;
     private Integer idComuna;
-//    private Comuna comuna;
+    private Comuna comuna;
     
     public Direccion(){
         
@@ -54,13 +55,13 @@ public class Direccion {
         this.villa = villa;
     }
     
-//    public Comuna getComuna() {
-//        return comuna;
-//    }
-//
-//    public void setComuna(Comuna comuna) {
-//        this.comuna = comuna;
-//    }
+    public Comuna getComuna() {
+        return comuna;
+    }
+
+    public void setComuna(Comuna comuna) {
+        this.comuna = comuna;
+    }
 
     public Integer getIdComuna() {
         return idComuna;
@@ -68,6 +69,14 @@ public class Direccion {
 
     public void setIdComuna(Integer idComuna) {
         this.idComuna = idComuna;
+    }
+
+    public Integer getIdDireccion() {
+        return idDireccion;
+    }
+
+    public void setIdDireccion(Integer idDireccion) {
+        this.idDireccion = idDireccion;
     }
     
     
