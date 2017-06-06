@@ -42,4 +42,10 @@ public class Comuna {
     public void setRegion(Region region) {
         this.region = region;
     }
+
+    @Override
+    public String toString() {
+        return "Comuna{" + "idComuna=" + idComuna + ", nombre=" + nombre + ", region=" + region + '}';
+    }
+    
 }

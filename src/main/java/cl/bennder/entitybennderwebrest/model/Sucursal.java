@@ -76,6 +76,11 @@ public class Sucursal {
     public void setDireccion(Direccion direccion) {
         this.direccion = direccion;
     }
+
+    @Override
+    public String toString() {
+        return "Sucursal{" + "idSucursal=" + idSucursal + ", nombre=" + nombre + ", horarioAtencion=" + horarioAtencion + ", oficina=" + oficina + ", passwordPOS=" + passwordPOS + ", direccion=" + direccion + '}';
+    }
     
     
 }

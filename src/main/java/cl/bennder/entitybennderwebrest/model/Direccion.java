@@ -78,6 +78,11 @@ public class Direccion {
     public void setIdDireccion(Integer idDireccion) {
         this.idDireccion = idDireccion;
     }
+
+    @Override
+    public String toString() {
+        return "Direccion{" + "idDireccion=" + idDireccion + ", calle=" + calle + ", numero=" + numero + ", departamento=" + departamento + ", villa=" + villa + ", idComuna=" + idComuna + ", comuna=" + comuna + '}';
+    }
     
     
 }
