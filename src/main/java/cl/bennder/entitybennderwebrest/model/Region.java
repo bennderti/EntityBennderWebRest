@@ -32,5 +32,11 @@ public class Region {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
-    } 
+    }
+
+    @Override
+    public String toString() {
+        return "Region{" + "idRegion=" + idRegion + ", nombre=" + nombre + '}';
+    }
+    
 }
