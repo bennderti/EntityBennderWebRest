@@ -5,7 +5,6 @@
  */
 package cl.bennder.entitybennderwebrest.request;
 
-import cl.bennder.entitybennderwebrest.model.Beneficio;
 import java.util.List;
 
 /**
@@ -14,13 +13,13 @@ import java.util.List;
  */
 public class PublicarBeneficiosRequest extends UserRequest{
     
-    private List<Beneficio> listaBeneficios;
+    private List<Integer> listaIdBeneficios;
 
-    public List<Beneficio> getListaBeneficios() {
-        return listaBeneficios;
+    public List<Integer> getListaIdBeneficios() {
+        return listaIdBeneficios;
     }
 
-    public void setListaBeneficios(List<Beneficio> listaBeneficios) {
-        this.listaBeneficios = listaBeneficios;
+    public void setListaIdBeneficios(List<Integer> listaIdBeneficios) {
+        this.listaIdBeneficios = listaIdBeneficios;
     }  
 }
