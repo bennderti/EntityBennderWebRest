@@ -16,6 +16,7 @@ public class Sucursal {
     private String oficina;
     private String passwordPOS;
     private Direccion direccion;
+    private boolean habilitado;
 
     public Sucursal() {
     }
@@ -77,10 +78,20 @@ public class Sucursal {
         this.direccion = direccion;
     }
 
+    public boolean isHabilitado() {
+        return habilitado;
+    }
+
+    public void setHabilitado(boolean habilitado) {
+        this.habilitado = habilitado;
+    }
+
     @Override
     public String toString() {
-        return "Sucursal{" + "idSucursal=" + idSucursal + ", nombre=" + nombre + ", horarioAtencion=" + horarioAtencion + ", oficina=" + oficina + ", passwordPOS=" + passwordPOS + ", direccion=" + direccion + '}';
+        return "Sucursal{" + "idSucursal=" + idSucursal + ", nombre=" + nombre + ", horarioAtencion=" + horarioAtencion + ", oficina=" + oficina + ", passwordPOS=" + passwordPOS + ", direccion=" + direccion + ", habilitado=" + habilitado + '}';
     }
+
+    
     
     
 }
