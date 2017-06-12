@@ -16,21 +16,26 @@ public class LoginResponse extends ValidacionResponse implements Serializable {
     private Integer idUsuario;//rut sin dv
     private Integer idEstadoUsuario;
     private String token;
+    private boolean esPasswordTemporal;
 
     public LoginResponse(Integer idUsuario) {
         this.idUsuario = idUsuario;
+        this.esPasswordTemporal = false;
     }
 
     public LoginResponse(Integer idUsuario, Validacion validacion) {
         super(validacion);
         this.idUsuario = idUsuario;
+        this.esPasswordTemporal = false;
     }
 
     public LoginResponse() {
+        this.esPasswordTemporal = false;
     }
 
     public LoginResponse(String token) {
         this.token = token;
+        this.esPasswordTemporal = false;
     }
 
     public Integer getIdUsuario() {
@@ -43,8 +48,10 @@ public class LoginResponse extends ValidacionResponse implements Serializable {
 
     @Override
     public String toString() {
-        return "LoginResponse{" + "idUsuario=" + idUsuario + '}';
+        return "LoginResponse{" + "idUsuario=" + idUsuario + ", esPasswordTemporal=" + esPasswordTemporal + '}';
     }
+
+    
 
     public Integer getIdEstadoUsuario() {
         return idEstadoUsuario;
@@ -61,4 +68,13 @@ public class LoginResponse extends ValidacionResponse implements Serializable {
     public void setToken(String token) {
         this.token = token;
     }
+
+    public boolean isEsPasswordTemporal() {
+        return esPasswordTemporal;
+    }
+
+    public void setEsPasswordTemporal(boolean esPasswordTemporal) {
+        this.esPasswordTemporal = esPasswordTemporal;
+    }
+    
 }

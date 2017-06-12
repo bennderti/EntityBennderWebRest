@@ -27,9 +27,10 @@ public class Usuario {
     private String password;
     private Boolean habilitado;
     private List<Perfil> perfiles;
+    private boolean esPasswordTemporal;
 
     public Usuario() {
-       
+       esPasswordTemporal = false;
     }    
 
     public Integer getIdUsuario() {
@@ -127,4 +128,13 @@ public class Usuario {
     public void setHabilitado(Boolean habilitado) {
         this.habilitado = habilitado;
     }
+
+    public boolean isEsPasswordTemporal() {
+        return esPasswordTemporal;
+    }
+
+    public void setEsPasswordTemporal(boolean esPasswordTemporal) {
+        this.esPasswordTemporal = esPasswordTemporal;
+    }
+    
 }
