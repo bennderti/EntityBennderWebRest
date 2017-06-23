@@ -15,6 +15,7 @@ import java.util.List;
         include = JsonTypeInfo.As.WRAPPER_OBJECT)
 @JsonSubTypes({
         @JsonSubTypes.Type(value = Descuento.class, name = "Descuento"),
+        @JsonSubTypes.Type(value = Adicional.class, name = "Adicional"),
         @JsonSubTypes.Type(value = Producto.class, name = "Producto")
 })
 public class Beneficio implements Serializable{
