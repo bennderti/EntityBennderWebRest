@@ -12,6 +12,7 @@ package cl.bennder.entitybennderwebrest.request;
 public class GetCuponBeneficioRequest extends UserRequest {
     private Integer idBeneficio;
     private Integer cantidad;
+    private String tenantUser;
 
     public GetCuponBeneficioRequest() {
         this.cantidad = 1;
@@ -24,6 +25,7 @@ public class GetCuponBeneficioRequest extends UserRequest {
     public GetCuponBeneficioRequest(String token, Integer idBeneficio) {
         this.idBeneficio = idBeneficio;
     }
+
 
     public Integer getIdBeneficio() {
         return idBeneficio;
@@ -44,9 +46,19 @@ public class GetCuponBeneficioRequest extends UserRequest {
         this.cantidad = cantidad;
     }
 
+    
+
+    public String getTenantUser() {
+        return tenantUser;
+    }
+
+    public void setTenantUser(String tenantUser) {
+        this.tenantUser = tenantUser;
+    }
+
     @Override
     public String toString() {
-        return "GetCuponBeneficioRequest{" + "idBeneficio=" + idBeneficio + ", cantidad=" + cantidad + '}';
+        return "GetCuponBeneficioRequest{" + "idBeneficio=" + idBeneficio + ", cantidad=" + cantidad + ", tenantUser=" + tenantUser + '}';
     }
     
     
