@@ -18,9 +18,9 @@ public class GeneraCuponQrRequest extends UserRequest {
         this.codigoBeneficioEncriptado = codigoBeneficioEncriptado;
     }
 
-    public GeneraCuponQrRequest(String token, String codigoBeneficioEncriptado) {
-        this.codigoBeneficioEncriptado = codigoBeneficioEncriptado;
-    }
+//    public GeneraCuponQrRequest(String token, String codigoBeneficioEncriptado) {
+//        this.codigoBeneficioEncriptado = codigoBeneficioEncriptado;
+//    }
 
     public String getCodigoBeneficioEncriptado() {
         return codigoBeneficioEncriptado;
