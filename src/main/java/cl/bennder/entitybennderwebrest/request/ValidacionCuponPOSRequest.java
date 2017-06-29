@@ -14,15 +14,17 @@ public class ValidacionCuponPOSRequest extends UserRequest {
     private Integer idVendedor;
     private Integer idDireccionSucursal;//id direccion de sucursal
     private String passwordSucursal;//contraseña sucusal
+    private String tenantId;
 
     public ValidacionCuponPOSRequest() {
     }
 
-    public ValidacionCuponPOSRequest(String codigoCuponEncriptado, Integer idVendedor, Integer idDireccionSucursal, String passwordSucursal) {
+    public ValidacionCuponPOSRequest(String codigoCuponEncriptado, Integer idVendedor, Integer idDireccionSucursal, String passwordSucursal,String tenantId) {
         this.codigoCuponEncriptado = codigoCuponEncriptado;
         this.idVendedor = idVendedor;
         this.idDireccionSucursal = idDireccionSucursal;
         this.passwordSucursal = passwordSucursal;
+        this.tenantId = tenantId;
     }
 
     public String getCodigoCuponEncriptado() {
@@ -56,5 +58,19 @@ public class ValidacionCuponPOSRequest extends UserRequest {
     public void setPasswordSucursal(String passwordSucursal) {
         this.passwordSucursal = passwordSucursal;
     }
+
+    public String getTenantId() {
+        return tenantId;
+    }
+
+    public void setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+    }
+
+    @Override
+    public String toString() {
+        return "ValidacionCuponPOSRequest{" + "codigoCuponEncriptado=" + codigoCuponEncriptado + ", idVendedor=" + idVendedor + ", idDireccionSucursal=" + idDireccionSucursal + ", tenantId=" + tenantId + '}';
+    }
+    
     
 }

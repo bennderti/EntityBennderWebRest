@@ -11,6 +11,7 @@ package cl.bennder.entitybennderwebrest.request;
  */
 public class CanjeaCuponRequest extends UserRequest{
     private String codigoBeneficioEncriptado;
+    private String tenantId;
 
     public CanjeaCuponRequest() {
     }
@@ -31,5 +32,13 @@ public class CanjeaCuponRequest extends UserRequest{
         this.codigoBeneficioEncriptado = codigoBeneficioEncriptado;
     }
 
+    public String getTenantId() {
+        return tenantId;
+    }
+
+    public void setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+    }
+    
     
 }
