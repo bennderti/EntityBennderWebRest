@@ -11,11 +11,13 @@ package cl.bennder.entitybennderwebrest.request;
  */
 public class GeneraCuponQrRequest extends UserRequest {
     private String codigoBeneficioEncriptado;
+    private String tenantId;
     public GeneraCuponQrRequest() {
     }
 
-    public GeneraCuponQrRequest(String codigoBeneficioEncriptado) {
+    public GeneraCuponQrRequest(String codigoBeneficioEncriptado,String tenantId) {
         this.codigoBeneficioEncriptado = codigoBeneficioEncriptado;
+        this.tenantId = tenantId;
     }
 
 //    public GeneraCuponQrRequest(String token, String codigoBeneficioEncriptado) {
@@ -28,6 +30,14 @@ public class GeneraCuponQrRequest extends UserRequest {
 
     public void setCodigoBeneficioEncriptado(String codigoBeneficioEncriptado) {
         this.codigoBeneficioEncriptado = codigoBeneficioEncriptado;
+    }
+
+    public String getTenantId() {
+        return tenantId;
+    }
+
+    public void setTenantId(String tenantId) {
+        this.tenantId = tenantId;
     }
     
     
