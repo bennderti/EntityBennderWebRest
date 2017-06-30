@@ -12,17 +12,17 @@ package cl.bennder.entitybennderwebrest.request;
 public class ValidacionCuponPOSRequest extends UserRequest {
     private String codigoCuponEncriptado;
     private Integer idVendedor;
-    private Integer idDireccionSucursal;//id direccion de sucursal
+    private Integer idSucursal;//id direccion de sucursal
     private String passwordSucursal;//contraseña sucusal
     private String tenantId;
 
     public ValidacionCuponPOSRequest() {
     }
 
-    public ValidacionCuponPOSRequest(String codigoCuponEncriptado, Integer idVendedor, Integer idDireccionSucursal, String passwordSucursal,String tenantId) {
+    public ValidacionCuponPOSRequest(String codigoCuponEncriptado, Integer idVendedor, Integer idSucursal, String passwordSucursal,String tenantId) {
         this.codigoCuponEncriptado = codigoCuponEncriptado;
         this.idVendedor = idVendedor;
-        this.idDireccionSucursal = idDireccionSucursal;
+        this.idSucursal = idSucursal;
         this.passwordSucursal = passwordSucursal;
         this.tenantId = tenantId;
     }
@@ -43,14 +43,15 @@ public class ValidacionCuponPOSRequest extends UserRequest {
         this.idVendedor = idVendedor;
     }
 
-    public Integer getIdDireccionSucursal() {
-        return idDireccionSucursal;
+    public Integer getIdSucursal() {
+        return idSucursal;
     }
 
-    public void setIdDireccionSucursal(Integer idDireccionSucursal) {
-        this.idDireccionSucursal = idDireccionSucursal;
+    public void setIdSucursal(Integer idSucursal) {
+        this.idSucursal = idSucursal;
     }
 
+    
     public String getPasswordSucursal() {
         return passwordSucursal;
     }
@@ -69,7 +70,7 @@ public class ValidacionCuponPOSRequest extends UserRequest {
 
     @Override
     public String toString() {
-        return "ValidacionCuponPOSRequest{" + "codigoCuponEncriptado=" + codigoCuponEncriptado + ", idVendedor=" + idVendedor + ", idDireccionSucursal=" + idDireccionSucursal + ", tenantId=" + tenantId + '}';
+        return "ValidacionCuponPOSRequest{" + "codigoCuponEncriptado=" + codigoCuponEncriptado + ", idVendedor=" + idVendedor + ", idSucursal=" + idSucursal + ", tenantId=" + tenantId + '}';
     }
     
     
