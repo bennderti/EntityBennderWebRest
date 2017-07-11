@@ -13,6 +13,7 @@ package cl.bennder.entitybennderwebrest.request;
 public class RecuperacionPasswordRequest extends UserRequest {
     private String usuarioCorreo;// correo de destino al que se envia la contraseña
     private String index;
+    private String tenantId;
 
     public RecuperacionPasswordRequest(String usuarioCorreo) {
         this.usuarioCorreo = usuarioCorreo;
@@ -41,10 +42,21 @@ public class RecuperacionPasswordRequest extends UserRequest {
         this.index = index;
     }
 
+    public String getTenantId() {
+        return tenantId;
+    }
+
+    public void setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+    }
+
     @Override
     public String toString() {
-        return "RecuperacionPasswordRequest{" + "usuarioCorreo=" + usuarioCorreo + ", index=" + index + '}';
+        return "RecuperacionPasswordRequest{" + "usuarioCorreo=" + usuarioCorreo + ", index=" + index + ", tenantId=" + tenantId + '}';
     }
+
+    
+    
 
     
     
