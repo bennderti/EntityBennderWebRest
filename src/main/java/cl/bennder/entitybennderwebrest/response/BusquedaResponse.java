@@ -6,13 +6,14 @@
 package cl.bennder.entitybennderwebrest.response;
 
 import cl.bennder.entitybennderwebrest.model.Beneficio;
+import java.io.Serializable;
 import java.util.List;
 
 /**
  *
  * @author Marcos
  */
-public class BusquedaResponse {
+public class BusquedaResponse extends ValidacionResponse implements Serializable {
     
     private List<Beneficio> beneficios;
 
