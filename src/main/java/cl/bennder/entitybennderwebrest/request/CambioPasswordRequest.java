@@ -14,6 +14,7 @@ public class CambioPasswordRequest extends UserRequest{
     private String newPassword;
     private String repeatPassword;
     private String usuarioCorreo;
+    private String tenantId;
 
     public CambioPasswordRequest() {
     }
@@ -21,6 +22,12 @@ public class CambioPasswordRequest extends UserRequest{
     public CambioPasswordRequest(String newPassword, String usuarioCorreo) {
         this.newPassword = newPassword;
         this.usuarioCorreo = usuarioCorreo;
+    }
+    
+    public CambioPasswordRequest(String newPassword, String usuarioCorreo, String tenantId) {
+        this.newPassword = newPassword;
+        this.usuarioCorreo = usuarioCorreo;
+        this.tenantId = tenantId;
     }
     
 
@@ -46,6 +53,14 @@ public class CambioPasswordRequest extends UserRequest{
 
     public void setRepeatPassword(String repeatPassword) {
         this.repeatPassword = repeatPassword;
+    }
+
+    public String getTenantId() {
+        return tenantId;
+    }
+
+    public void setTenantId(String tenantId) {
+        this.tenantId = tenantId;
     }
     
     
