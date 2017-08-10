@@ -6,6 +6,7 @@
 package cl.bennder.entitybennderwebrest.request;
 
 import cl.bennder.entitybennderwebrest.model.BeneficioImagen;
+import cl.bennder.entitybennderwebrest.model.ImagenEscalable;
 import cl.bennder.entitybennderwebrest.model.ImagenGenerica;
 import cl.bennder.entitybennderwebrest.model.TipoBeneficio;
 
@@ -43,6 +44,7 @@ public class InfoBeneficioRequest extends UserRequest {
     private List<Integer> sucursales;
     private boolean tieneImagenGenerica;
     private Integer idSubCategoria;
+    private List<ImagenEscalable> imagenesEscalables;
 
     public InfoBeneficioRequest(Integer idBeneficio, String titulo, String descripcion, Date fechaInicial, Date fechaExpiracion, Boolean habilitado, Integer calificacion, Integer stock, Integer idProveedor, String nombreProveedor, Integer idCategoria, TipoBeneficio tipoBeneficio, Integer limiteStock, Integer visitasGeneral, List<BeneficioImagen> imagenesBeneficio, Integer precioNormal, Integer precioOferta, Integer porcentajeDescuento, List<String> adicionales, List<String> condiciones, List<Integer> sucursales) {
         this.idBeneficio = idBeneficio;
@@ -245,6 +247,14 @@ public class InfoBeneficioRequest extends UserRequest {
         this.precioNormal = precioNormal;
     }
 
+    public List<ImagenEscalable> getImagenesEscalables() {
+        return imagenesEscalables;
+    }
+
+    public void setImagenesEscalables(List<ImagenEscalable> imagenesEscalables) {
+        this.imagenesEscalables = imagenesEscalables;
+    }
+
     public Integer getPrecioOferta() {
         return precioOferta;
     }
@@ -311,10 +321,15 @@ public class InfoBeneficioRequest extends UserRequest {
     public void setIdSubCategoria(Integer idSubCategoria) {
         this.idSubCategoria = idSubCategoria;
     }
+//
+//    @Override
+//    public String toString() {
+//        return "InfoBeneficioRequest{" + "idBeneficio=" + idBeneficio + ", titulo=" + titulo + ", descripcion=" + descripcion + ", fechaCreacion=" + fechaCreacion + ", fechaInicial=" + fechaInicial + ", fechaExpiracion=" + fechaExpiracion + ", habilitado=" + habilitado + ", calificacion=" + calificacion + ", stock=" + stock + ", idProveedor=" + idProveedor + ", nombreProveedor=" + nombreProveedor + ", idCategoria=" + idCategoria + ", tipoBeneficio=" + tipoBeneficio + ", limiteStock=" + limiteStock + ", visitasGeneral=" + visitasGeneral + ", imagenesBeneficio=" + imagenesBeneficio + ", imagenesGenericas=" + imagenesGenericas + ", precioNormal=" + precioNormal + ", precioOferta=" + precioOferta + ", porcentajeDescuento=" + porcentajeDescuento + ", adicionales=" + adicionales + ", condiciones=" + condiciones + ", sucursales=" + sucursales + ", tieneImagenGenerica=" + tieneImagenGenerica + ", idSubCategoria=" + idSubCategoria + '}';
+//    }
 
     @Override
     public String toString() {
-        return "InfoBeneficioRequest{" + "idBeneficio=" + idBeneficio + ", titulo=" + titulo + ", descripcion=" + descripcion + ", fechaCreacion=" + fechaCreacion + ", fechaInicial=" + fechaInicial + ", fechaExpiracion=" + fechaExpiracion + ", habilitado=" + habilitado + ", calificacion=" + calificacion + ", stock=" + stock + ", idProveedor=" + idProveedor + ", nombreProveedor=" + nombreProveedor + ", idCategoria=" + idCategoria + ", tipoBeneficio=" + tipoBeneficio + ", limiteStock=" + limiteStock + ", visitasGeneral=" + visitasGeneral + ", imagenesBeneficio=" + imagenesBeneficio + ", imagenesGenericas=" + imagenesGenericas + ", precioNormal=" + precioNormal + ", precioOferta=" + precioOferta + ", porcentajeDescuento=" + porcentajeDescuento + ", adicionales=" + adicionales + ", condiciones=" + condiciones + ", sucursales=" + sucursales + ", tieneImagenGenerica=" + tieneImagenGenerica + ", idSubCategoria=" + idSubCategoria + '}';
+        return "InfoBeneficioRequest{" + "idBeneficio=" + idBeneficio + ", titulo=" + titulo + ", descripcion=" + descripcion + ", fechaCreacion=" + fechaCreacion + ", fechaInicial=" + fechaInicial + ", fechaExpiracion=" + fechaExpiracion + ", habilitado=" + habilitado + ", calificacion=" + calificacion + ", stock=" + stock + ", idProveedor=" + idProveedor + ", nombreProveedor=" + nombreProveedor + ", idCategoria=" + idCategoria + ", tipoBeneficio=" + tipoBeneficio + ", limiteStock=" + limiteStock + ", visitasGeneral=" + visitasGeneral + ", imagenesBeneficio=" + imagenesBeneficio + ", imagenesGenericas=" + imagenesGenericas + ", precioNormal=" + precioNormal + ", precioOferta=" + precioOferta + ", porcentajeDescuento=" + porcentajeDescuento + ", adicionales=" + adicionales + ", condiciones=" + condiciones + ", sucursales=" + sucursales + ", tieneImagenGenerica=" + tieneImagenGenerica + ", idSubCategoria=" + idSubCategoria + ", imagenesEscalables=" + imagenesEscalables + '}';
     }
 
     

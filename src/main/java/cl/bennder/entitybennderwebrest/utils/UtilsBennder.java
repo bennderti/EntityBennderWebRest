@@ -129,6 +129,7 @@ public class UtilsBennder {
             
             File file = new File(pathFile);
             if(file != null){
+                log.info("Borrando imagen ->{}",pathFile);
                 file.delete();
             }
     	}catch(Exception e){
@@ -190,6 +191,44 @@ public class UtilsBennder {
             log.error("Error en resizeImage",ex);
         }
         //Logger.getLogger(UtilsBennder.class.getName()).log(Level.SEVERE, "fin");
+   }
+    /***
+     * Escala imagen y entrega byte array de imagen
+     * @param pathImage
+     * @param imgWidth
+     * @param imgHeight
+     * @param extension
+     * @return 
+     */
+    public static byte[] resizeImageGetByte(String pathImage,int imgWidth, int imgHeight, String extension){
+        byte[] imagenByte = null;
+        BufferedImage originalImage;
+        //Logger.getLogger(UtilsBennder.class.getName()).log(Level.SEVERE, "inicio");
+       // System.out.println("cl.bennder.entitybennderwebrest.utils.UtilsBennder.resizeImage() - file.getAbsolutePath(): "+file.getAbsolutePath());
+        try {
+            //System.out.println("cl.bennder.entitybennderwebrest.utils.UtilsBennder.resizeImage() - pathImage:"+pathImage+",imgWidth:"+imgWidth+",imgHeight:"+imgHeight+",extension:"+extension);
+            log.info("[resizeImage] - pathImage:"+pathImage+",imgWidth:"+imgWidth+",imgHeight:"+imgHeight+",extension:"+extension);
+            
+            originalImage = ImageIO.read(new File(pathImage));
+            int type = originalImage.getType() == 0? BufferedImage.TYPE_INT_ARGB : originalImage.getType();
+            BufferedImage resizedImage = new BufferedImage(imgWidth, imgHeight, type);
+            Graphics2D g = resizedImage.createGraphics();
+            g.drawImage(originalImage, 0, 0, imgWidth, imgHeight, null);
+            g.dispose();
+            log.info("[resizeImage] - escribiendo imagen en disco");
+            File imgByte = new File(pathImage);
+            ImageIO.write(resizedImage, extension, imgByte);
+            imagenByte = readContentIntoByteArray(imgByte);
+            deleteFile(pathImage);
+            log.info("[resizeImage] - imagenByte->{} Kb",imagenByte.length/1024);
+            
+        } catch (IOException ex) {
+            //Logger.getLogger(UtilsBennder.class.getName()).log(Level.SEVERE, null, ex);
+            //ex.printStackTrace();
+            log.error("Error en resizeImage",ex);
+        }
+        //Logger.getLogger(UtilsBennder.class.getName()).log(Level.SEVERE, "fin");
+        return imagenByte;
    }
    /***
     * Método que obtiene la ruta absoluta de un archivo X ubicado en la carpeta de recursos src/main/resources/xxx/xx.extension
