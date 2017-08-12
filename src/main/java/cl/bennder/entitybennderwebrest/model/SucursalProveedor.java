@@ -69,6 +69,11 @@ public class SucursalProveedor{
     public void setSelected(Integer selected) {
         this.selected = selected;
     }
+
+    @Override
+    public String toString() {
+        return "SucursalProveedor{" + "idSucursal=" + idSucursal + ", idDireccion=" + idDireccion + ", idComuna=" + idComuna + ", nombreSucursal=" + nombreSucursal + ", selected=" + selected + '}';
+    }
     
     
     
