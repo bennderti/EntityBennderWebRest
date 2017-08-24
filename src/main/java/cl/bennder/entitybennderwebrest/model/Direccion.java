@@ -56,6 +56,9 @@ public class Direccion {
     }
     
     public Comuna getComuna() {
+        if(comuna == null){
+            comuna = new Comuna();
+        }
         return comuna;
     }
 
