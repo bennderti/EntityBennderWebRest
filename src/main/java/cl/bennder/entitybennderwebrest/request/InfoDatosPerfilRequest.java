@@ -19,6 +19,11 @@ public class InfoDatosPerfilRequest extends UserRequest{
     public InfoDatosPerfilRequest() {
     }
 
+    public InfoDatosPerfilRequest(Usuario usuario, String tenantId) {
+        this.usuario = usuario;
+        this.tenantId = tenantId;
+    }
+
     public Usuario getUsuario() {
         return usuario;
     }

@@ -36,6 +36,9 @@ public class Comuna {
     }
 
     public Region getRegion() {
+        if(region == null){
+            region =  new Region();
+        }
         return region;
     }
 

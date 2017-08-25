@@ -66,6 +66,10 @@ public class Usuario {
     }
 
     public Direccion getDireccion() {
+        if(direccion == null){
+            direccion = new Direccion();
+        }
+        
         return direccion;
     }
 
@@ -74,6 +78,9 @@ public class Usuario {
     }
 
     public Contacto getContacto() {
+        if(contacto == null){
+            contacto = new Contacto();
+        }
         return contacto;
     }
 

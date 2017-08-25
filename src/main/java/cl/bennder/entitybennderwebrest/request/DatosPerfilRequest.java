@@ -20,6 +20,12 @@ public class DatosPerfilRequest extends UserRequest{
         this.usuario = usuario;
     }
 
+    public DatosPerfilRequest(String usuario, String tenantId) {
+        this.usuario = usuario;
+        this.tenantId = tenantId;
+    }
+    
+
     public String getUsuario() {
         return usuario;
     }

@@ -8,7 +8,6 @@ package cl.bennder.entitybennderwebrest.response;
 import cl.bennder.entitybennderwebrest.model.Comuna;
 import cl.bennder.entitybennderwebrest.model.Region;
 import cl.bennder.entitybennderwebrest.model.Usuario;
-import cl.bennder.entitybennderwebrest.model.Validacion;
 import java.util.List;
 
 /**
