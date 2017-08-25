@@ -5,28 +5,40 @@
  */
 package cl.bennder.entitybennderwebrest.request;
 
-import cl.bennder.entitybennderwebrest.model.DatosPerfil;
+import cl.bennder.entitybennderwebrest.model.Usuario;
+
 
 /**
  *
  * @author ext_dayanez
  */
 public class InfoDatosPerfilRequest extends UserRequest{
-    private DatosPerfil datosPerfil;
+    private Usuario usuario;
+    private String tenantId;
 
     public InfoDatosPerfilRequest() {
     }
 
-    public InfoDatosPerfilRequest(DatosPerfil datosPerfil) {
-        this.datosPerfil = datosPerfil;
+    public Usuario getUsuario() {
+        return usuario;
     }
 
-    public DatosPerfil getDatosPerfil() {
-        return datosPerfil;
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 
-    public void setDatosPerfil(DatosPerfil datosPerfil) {
-        this.datosPerfil = datosPerfil;
+    public String getTenantId() {
+        return tenantId;
     }
+
+    public void setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+    }
+
+    @Override
+    public String toString() {
+        return "InfoDatosPerfilRequest{" + "usuario=" + usuario + ", tenantId=" + tenantId + '}';
+    }
+
     
 }

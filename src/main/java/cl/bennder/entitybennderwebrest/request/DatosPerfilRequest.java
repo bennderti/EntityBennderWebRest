@@ -11,7 +11,8 @@ package cl.bennder.entitybennderwebrest.request;
  */
 public class DatosPerfilRequest extends UserRequest{
     private String usuario;
-
+    private String tenantId;
+    
     public DatosPerfilRequest() {
     }
 
@@ -27,9 +28,19 @@ public class DatosPerfilRequest extends UserRequest{
         this.usuario = usuario;
     }
 
+    public String getTenantId() {
+        return tenantId;
+    }
+
+    public void setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+    }
+
     @Override
     public String toString() {
-        return "DatosPerfilRequest{" + "usuario=" + usuario + '}';
+        return "DatosPerfilRequest{" + "usuario=" + usuario + ", tenantId=" + tenantId + '}';
     }
+
+    
     
 }

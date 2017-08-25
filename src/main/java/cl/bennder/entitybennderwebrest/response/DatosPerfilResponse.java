@@ -6,8 +6,8 @@
 package cl.bennder.entitybennderwebrest.response;
 
 import cl.bennder.entitybennderwebrest.model.Comuna;
-import cl.bennder.entitybennderwebrest.model.DatosPerfil;
 import cl.bennder.entitybennderwebrest.model.Region;
+import cl.bennder.entitybennderwebrest.model.Usuario;
 import cl.bennder.entitybennderwebrest.model.Validacion;
 import java.util.List;
 
@@ -16,32 +16,19 @@ import java.util.List;
  * @author ext_dayanez
  */
 public class DatosPerfilResponse extends ValidacionResponse{
-    private DatosPerfil datosPerfil;
+    private Usuario usuario;
     private List<Region> regiones;
     private List<Comuna> comunas;
 
     public DatosPerfilResponse() {
     }
 
-    public DatosPerfilResponse(DatosPerfil datosPerfil, List<Region> regiones, List<Comuna> comunas) {
-        this.datosPerfil = datosPerfil;
-        this.regiones = regiones;
-        this.comunas = comunas;
+    public Usuario getUsuario() {
+        return usuario;
     }
 
-    public DatosPerfilResponse(DatosPerfil datosPerfil, List<Region> regiones, List<Comuna> comunas, Validacion validacion) {
-        super(validacion);
-        this.datosPerfil = datosPerfil;
-        this.regiones = regiones;
-        this.comunas = comunas;
-    }
-
-    public DatosPerfil getDatosPerfil() {
-        return datosPerfil;
-    }
-
-    public void setDatosPerfil(DatosPerfil datosPerfil) {
-        this.datosPerfil = datosPerfil;
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 
     public List<Region> getRegiones() {
@@ -62,8 +49,8 @@ public class DatosPerfilResponse extends ValidacionResponse{
 
     @Override
     public String toString() {
-        return "DatosPerfilResponse{" + "datosPerfil=" + datosPerfil + ", regiones=" + regiones + ", comunas=" + comunas + '}';
+        return "DatosPerfilResponse{" + "usuario=" + usuario + ", regiones=" + regiones + ", comunas=" + comunas + '}';
     }
-
+    
     
 }

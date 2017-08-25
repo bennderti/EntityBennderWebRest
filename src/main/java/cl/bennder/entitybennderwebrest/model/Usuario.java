@@ -136,5 +136,10 @@ public class Usuario {
     public void setEsPasswordTemporal(boolean esPasswordTemporal) {
         this.esPasswordTemporal = esPasswordTemporal;
     }
+
+    @Override
+    public String toString() {
+        return "Usuario{" + "idUsuario=" + idUsuario + ", nombres=" + nombres + ", apellidoP=" + apellidoP + ", apellidoM=" + apellidoM + ", fechaNacimiento=" + fechaNacimiento + ", direccion=" + direccion + ", contacto=" + contacto + ", usuario=" + usuario + ", idEstado=" + idEstado + ", habilitado=" + habilitado + ", perfiles=" + perfiles + ", esPasswordTemporal=" + esPasswordTemporal + '}';
+    }
     
 }
