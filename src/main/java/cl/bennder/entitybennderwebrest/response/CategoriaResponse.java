@@ -11,6 +11,8 @@ import cl.bennder.entitybennderwebrest.model.Categoria;
 import cl.bennder.entitybennderwebrest.model.Validacion;
 import java.io.Serializable;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 /**
  *
@@ -21,6 +23,8 @@ public class CategoriaResponse extends ValidacionResponse implements Serializabl
     private List<Categoria> categoriasRelacionadas;
     private List<Beneficio> beneficios;
     private Categoria categoriaPadre;
+    private Map<String,Set<String>> filtros;
+    private Map<String, Integer> rango;
 
     public CategoriaResponse() {
     }
@@ -53,5 +57,21 @@ public class CategoriaResponse extends ValidacionResponse implements Serializabl
 
     public void setCategoriaPadre(Categoria categoriaPadre) {
         this.categoriaPadre = categoriaPadre;
+    }
+
+    public Map<String, Set<String>> getFiltros() {
+        return filtros;
+    }
+
+    public void setFiltros(Map<String, Set<String>> filtros) {
+        this.filtros = filtros;
+    }
+
+    public Map<String, Integer> getRango() {
+        return rango;
+    }
+
+    public void setRango(Map<String, Integer> rango) {
+        this.rango = rango;
     }
 }
