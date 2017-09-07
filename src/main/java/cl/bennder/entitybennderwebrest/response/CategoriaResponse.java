@@ -8,6 +8,7 @@ package cl.bennder.entitybennderwebrest.response;
 
 import cl.bennder.entitybennderwebrest.model.Beneficio;
 import cl.bennder.entitybennderwebrest.model.Categoria;
+import cl.bennder.entitybennderwebrest.model.Paginador;
 import cl.bennder.entitybennderwebrest.model.Validacion;
 import java.io.Serializable;
 import java.util.List;
@@ -25,6 +26,7 @@ public class CategoriaResponse extends ValidacionResponse implements Serializabl
     private Categoria categoriaPadre;
     private Map<String,Set<String>> filtros;
     private Map<String, Integer> rango;
+    private Paginador paginador;
 
     public CategoriaResponse() {
     }
@@ -74,4 +76,16 @@ public class CategoriaResponse extends ValidacionResponse implements Serializabl
     public void setRango(Map<String, Integer> rango) {
         this.rango = rango;
     }
+
+    public Paginador getPaginador() {
+        if(paginador == null){
+            paginador = new Paginador();
+        }
+        return paginador;
+    }
+
+    public void setPaginador(Paginador paginador) {
+        this.paginador = paginador;
+    }
+    
 }
