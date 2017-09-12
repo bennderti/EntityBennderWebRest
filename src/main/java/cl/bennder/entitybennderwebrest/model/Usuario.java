@@ -66,6 +66,10 @@ public class Usuario {
     }
 
     public Direccion getDireccion() {
+        if(direccion == null){
+            direccion = new Direccion();
+        }
+        
         return direccion;
     }
 
@@ -74,6 +78,9 @@ public class Usuario {
     }
 
     public Contacto getContacto() {
+        if(contacto == null){
+            contacto = new Contacto();
+        }
         return contacto;
     }
 
@@ -135,6 +142,11 @@ public class Usuario {
 
     public void setEsPasswordTemporal(boolean esPasswordTemporal) {
         this.esPasswordTemporal = esPasswordTemporal;
+    }
+
+    @Override
+    public String toString() {
+        return "Usuario{" + "idUsuario=" + idUsuario + ", nombres=" + nombres + ", apellidoP=" + apellidoP + ", apellidoM=" + apellidoM + ", fechaNacimiento=" + fechaNacimiento + ", direccion=" + direccion + ", contacto=" + contacto + ", usuario=" + usuario + ", idEstado=" + idEstado + ", habilitado=" + habilitado + ", perfiles=" + perfiles + ", esPasswordTemporal=" + esPasswordTemporal + '}';
     }
     
 }

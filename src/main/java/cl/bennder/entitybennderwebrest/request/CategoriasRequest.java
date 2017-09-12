@@ -5,12 +5,15 @@
  */
 package cl.bennder.entitybennderwebrest.request;
 
+import cl.bennder.entitybennderwebrest.model.Paginador;
+
 /**
  *
  * @author dyanez
  */
 public class CategoriasRequest extends UserRequest {
     private String nombreCategoria;
+    private Paginador paginador;
 
     public CategoriasRequest() {
     }
@@ -25,4 +28,22 @@ public class CategoriasRequest extends UserRequest {
     public void setNombreCategoria(String nombreCategoria) {
         this.nombreCategoria = nombreCategoria;
     }
+
+    public Paginador getPaginador() {
+        if(paginador == null){
+            paginador = new Paginador();
+        }
+        return paginador;
+    }
+
+    public void setPaginador(Paginador paginador) {
+        this.paginador = paginador;
+    }
+
+    @Override
+    public String toString() {
+        return "CategoriasRequest{" + "nombreCategoria=" + nombreCategoria + ", paginador=" + paginador + '}';
+    }
+    
+    
 }

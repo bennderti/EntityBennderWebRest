@@ -17,26 +17,9 @@ import java.util.List;
  * @author Diego
  */
 public class BeneficiosResponse extends ValidacionResponse implements Serializable{
-    private Validacion validacion;
     private List<Beneficio> beneficios;
 
     public BeneficiosResponse() {
-    }
-
-    public BeneficiosResponse(Validacion validacion, List<Beneficio> beneficios) {
-        this.validacion = validacion;
-        this.beneficios = beneficios;
-    }
-
-    public Validacion getValidacion() {
-        if(validacion == null){
-            validacion = new Validacion();
-        }
-        return validacion;
-    }
-
-    public void setValidacion(Validacion validacion) {
-        this.validacion = validacion;
     }
 
     public List<Beneficio> getBeneficios() {
@@ -52,7 +35,7 @@ public class BeneficiosResponse extends ValidacionResponse implements Serializab
 
     @Override
     public String toString() {
-        return "BeneficiosResponse{" + "validacion=" + validacion + ", beneficios=" + beneficios + '}';
+        return "BeneficiosResponse{" + "validacion=" + getValidacion() + ", beneficios=" + beneficios + '}';
     }
     
 }

@@ -20,19 +20,42 @@ public class Contacto {
         
     }
 
+    public Integer getIdContacto() {
+        return idContacto;
+    }
+
     public void setIdContacto(Integer idContacto) {
         this.idContacto = idContacto;
+    }
+
+    public Integer getCelular() {
+        return celular;
     }
 
     public void setCelular(Integer celular) {
         this.celular = celular;
     }
 
+    public Integer getFonoFijo() {
+        return fonoFijo;
+    }
+
     public void setFonoFijo(Integer fonoFijo) {
         this.fonoFijo = fonoFijo;
     }
 
+    public String getCorreo() {
+        return correo;
+    }
+
     public void setCorreo(String correo) {
         this.correo = correo;
-    }    
+    }
+
+    @Override
+    public String toString() {
+        return "Contacto{" + "idContacto=" + idContacto + ", celular=" + celular + ", fonoFijo=" + fonoFijo + ", correo=" + correo + '}';
+    }
+
+    
 }
