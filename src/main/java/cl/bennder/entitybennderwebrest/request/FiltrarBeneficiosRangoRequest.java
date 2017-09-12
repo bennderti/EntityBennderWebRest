@@ -7,19 +7,11 @@ import cl.bennder.entitybennderwebrest.response.ValidacionResponse;
  */
 public class FiltrarBeneficiosRangoRequest extends ValidacionResponse {
 
-    private String nombreCategoria;
+    private Integer idCategoria;
     private Integer rangoMin;
     private Integer rangoMax;
 
     public FiltrarBeneficiosRangoRequest() {
-    }
-
-    public String getNombreCategoria() {
-        return nombreCategoria;
-    }
-
-    public void setNombreCategoria(String nombreCategoria) {
-        this.nombreCategoria = nombreCategoria;
     }
 
     public Integer getRangoMin() {
@@ -36,5 +28,13 @@ public class FiltrarBeneficiosRangoRequest extends ValidacionResponse {
 
     public void setRangoMax(Integer rangoMax) {
         this.rangoMax = rangoMax;
+    }
+
+    public Integer getIdCategoria() {
+        return idCategoria;
+    }
+
+    public void setIdCategoria(Integer idCategoria) {
+        this.idCategoria = idCategoria;
     }
 }

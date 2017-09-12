@@ -7,18 +7,10 @@ import cl.bennder.entitybennderwebrest.response.ValidacionResponse;
  */
 public class FiltrarBeneficiosRequest extends ValidacionResponse {
 
-    private String nombreCategoria;
+    private Integer idCategoria;
     private String campoAFiltrar;
 
     public FiltrarBeneficiosRequest() {
-    }
-
-    public String getNombreCategoria() {
-        return nombreCategoria;
-    }
-
-    public void setNombreCategoria(String nombreCategoria) {
-        this.nombreCategoria = nombreCategoria;
     }
 
     public String getCampoAFiltrar() {
@@ -27,5 +19,13 @@ public class FiltrarBeneficiosRequest extends ValidacionResponse {
 
     public void setCampoAFiltrar(String campoAFiltrar) {
         this.campoAFiltrar = campoAFiltrar;
+    }
+
+    public Integer getIdCategoria() {
+        return idCategoria;
+    }
+
+    public void setIdCategoria(Integer idCategoria) {
+        this.idCategoria = idCategoria;
     }
 }
