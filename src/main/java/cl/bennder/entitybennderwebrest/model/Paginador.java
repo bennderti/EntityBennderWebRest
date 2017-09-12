@@ -13,6 +13,7 @@ public class Paginador {
     private Integer total;
     private Integer indicePagina;
     private Integer cantidadPagina;
+    private Categoria categoria;
 
     public Paginador() {
         this.indicePagina = 0;
@@ -49,9 +50,18 @@ public class Paginador {
         this.cantidadPagina = cantidadPagina;
     }
 
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
+    }
+
     @Override
     public String toString() {
-        return "Paginador{" + "total=" + total + ", indicePagina=" + indicePagina + ", cantidadPagina=" + cantidadPagina + '}';
+        return "Paginador{" + "total=" + total + ", indicePagina=" + indicePagina + ", cantidadPagina=" + cantidadPagina + ", categoria=" + categoria + '}';
     }
+
     
 }
