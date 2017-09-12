@@ -5,12 +5,15 @@
  */
 package cl.bennder.entitybennderwebrest.request;
 
+import cl.bennder.entitybennderwebrest.model.Paginador;
+
 /**
  *
  * @author dyanez
  */
 public class CategoriaByIdRequest extends UserRequest {
     private Integer idCategoria;
+    private Paginador paginador;
 
     public CategoriaByIdRequest() {
     }
@@ -25,6 +28,14 @@ public class CategoriaByIdRequest extends UserRequest {
 
     public void setIdCategoria(Integer idCategoria) {
         this.idCategoria = idCategoria;
+    }
+
+    public Paginador getPaginador() {
+        return paginador;
+    }
+
+    public void setPaginador(Paginador paginador) {
+        this.paginador = paginador;
     }
     
 }
