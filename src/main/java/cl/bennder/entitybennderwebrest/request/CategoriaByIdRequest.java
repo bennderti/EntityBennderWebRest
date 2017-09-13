@@ -31,6 +31,9 @@ public class CategoriaByIdRequest extends UserRequest {
     }
 
     public Paginador getPaginador() {
+        if(paginador == null){
+            this.paginador = new Paginador();
+        }
         return paginador;
     }
 
