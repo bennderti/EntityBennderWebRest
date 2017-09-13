@@ -64,8 +64,10 @@ public class Categoria implements Serializable{
 
     @Override
     public String toString() {
-        return "Categoria{" + "idCategoria=" + idCategoria + ", nombre=" + nombre + '}';
+        return "Categoria{" + "idCategoria=" + idCategoria + ", nombre=" + nombre + ", idCategoriaPadre=" + idCategoriaPadre + '}';
     }
+
+    
 
     public Integer getCantidadBeneficios() {
         return cantidadBeneficios;
