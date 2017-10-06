@@ -192,6 +192,30 @@ public class UtilsBennder {
         }
         //Logger.getLogger(UtilsBennder.class.getName()).log(Level.SEVERE, "fin");
    }
+
+    public static void resizeImage(File imgFile,int imgWidth, int imgHeight, String extension){
+        BufferedImage originalImage;
+        //Logger.getLogger(UtilsBennder.class.getName()).log(Level.SEVERE, "inicio");
+        // System.out.println("cl.bennder.entitybennderwebrest.utils.UtilsBennder.resizeImage() - file.getAbsolutePath(): "+file.getAbsolutePath());
+        try {
+            originalImage = ImageIO.read(imgFile);
+            int type = originalImage.getType() == 0? BufferedImage.TYPE_INT_ARGB : originalImage.getType();
+            BufferedImage resizedImage = new BufferedImage(imgWidth, imgHeight, type);
+            Graphics2D g = resizedImage.createGraphics();
+            g.drawImage(originalImage, 0, 0, imgWidth, imgHeight, null);
+            g.dispose();
+            log.info("[resizeImage] - escribiendo imagen temporal ");
+            ImageIO.write(resizedImage, extension, imgFile);
+
+
+        } catch (IOException ex) {
+            //Logger.getLogger(UtilsBennder.class.getName()).log(Level.SEVERE, null, ex);
+            //ex.printStackTrace();
+            log.error("Error en resizeImage",ex);
+        }
+        //Logger.getLogger(UtilsBennder.class.getName()).log(Level.SEVERE, "fin");
+    }
+
     /***
      * Escala imagen y entrega byte array de imagen
      * @param pathImage
